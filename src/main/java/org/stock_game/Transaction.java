@@ -1,4 +1,4 @@
-package org.example;
+package org.stock_game;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

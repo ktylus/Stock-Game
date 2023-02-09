@@ -1,4 +1,4 @@
-package org.example;
+package org.stock_game;
 
 public enum TransactionType {
     PURCHASE,
