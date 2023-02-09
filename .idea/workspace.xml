@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="implemented first few classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnectionException.java" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added error handling to FinnhubConnection class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnectionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnectionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675944783613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added error handling to FinnhubConnection class">
+      <created>1675950392300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675950392300</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented first few classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented first few classes" />
+    <MESSAGE value="added error handling to FinnhubConnection class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added error handling to FinnhubConnection class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
