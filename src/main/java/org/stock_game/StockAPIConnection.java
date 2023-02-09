@@ -6,6 +6,6 @@ import java.net.URISyntaxException;
 
 public interface StockAPIConnection {
 
-    public BigDecimal getStockPriceByCompanyCode(String code) throws URISyntaxException, IOException, InterruptedException;
+    public BigDecimal getStockPriceByCompanyCode(String code) throws StockAPIConnectionException;
 
 }

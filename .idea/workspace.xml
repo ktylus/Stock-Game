@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="implemented first few classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnectionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AlphaVantageConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/AlphaVantageConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DAOUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FinnhubConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +23,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -68,7 +60,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
