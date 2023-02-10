@@ -21,8 +21,4 @@ public class StockInPortfolio {
     public void setUnits(int newUnits) {
         units = newUnits;
     }
-
-    public String display() {
-        return companyCode + "  |  " + units;
-    }
 }

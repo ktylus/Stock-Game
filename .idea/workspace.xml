@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="small cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="implemented Portfolio with unit tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +79,22 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PortfolioTest">
+  <component name="RunManager" selected="Application.PortfolioPrinter">
     <configuration name="FinnhubConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.stock_game.FinnhubConnection" />
+      <module name="stock_game_project.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.stock_game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.stock_game.PortfolioPrinter" />
       <module name="stock_game_project.main" />
       <extension name="coverage">
         <pattern>
@@ -119,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PortfolioPrinter" />
         <item itemvalue="Gradle.PortfolioTest" />
         <item itemvalue="Application.FinnhubConnection" />
       </list>
@@ -133,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675937015899</updated>
       <workItem from="1675937016915" duration="4099000" />
-      <workItem from="1676018544418" duration="4827000" />
+      <workItem from="1676018544418" duration="7370000" />
     </task>
     <task id="LOCAL-00001" summary="implemented first few classes">
       <created>1675944783613</created>
@@ -156,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675950833418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implemented Portfolio with unit tests">
+      <created>1676028386857</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676028386857</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +186,8 @@
     <MESSAGE value="implemented first few classes" />
     <MESSAGE value="added error handling to FinnhubConnection class" />
     <MESSAGE value="small cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="small cleanup" />
+    <MESSAGE value="implemented Portfolio with unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented Portfolio with unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

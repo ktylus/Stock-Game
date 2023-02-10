@@ -15,7 +15,7 @@ public class TransactionHistory {
         int lastIndex = transactionHistory.size() - 1;
         System.out.println("_________________________________");
         for (int i = lastIndex; i > lastIndex - numberOfTransactions; i--) {
-            System.out.println(transactionHistory.get(lastIndex).display());
+            transactionHistory.get(lastIndex).display();
         }
         System.out.println("_________________________________");
     }
