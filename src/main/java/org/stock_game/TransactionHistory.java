@@ -19,4 +19,17 @@ public class TransactionHistory {
         }
         System.out.println("_________________________________");
     }
+
+    public int getAmountOfTransactions() {
+        return transactionHistory.size();
+    }
+
+    public void addTransaction(Transaction addedTransaction) {
+        transactionHistory.add(addedTransaction);
+    }
+
+    public Transaction getLatestTransaction() {
+        int lastTransactionIndex = transactionHistory.size() - 1;
+        return transactionHistory.get(lastTransactionIndex);
+    }
 }
