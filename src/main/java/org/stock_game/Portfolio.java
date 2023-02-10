@@ -44,20 +44,24 @@ public class Portfolio {
         }
     }
 
-    public void removeStock(String code, int units) {
-        // error if no such stock
-        // error if removing more than there is
-        // case 1: removing exactly the amount that there is -> delete stock from list
-        // case 2: removing less -> do just that
+    public void removeStock(String code, int units) throws PortfolioException {
+        StockInPortfolio stock = getStockByCode(code);
+        int ownedUnits = stock.getUnits();
+        if (units == 0) {
+            return;
+        }
+        if (units > ownedUnits) {
+            throw new PortfolioException("Attempted to remove more units of stock than owned.");
+        }
+
+        stocks.remove(stock);
+        if (ownedUnits - units > 0) {
+            stocks.add(new StockInPortfolio(code, ownedUnits - units));
+        }
     }
 
     private boolean containsStockWithCode(String code) {
-        for (StockInPortfolio stock : stocks) {
-            if (stock.getCompanyCode().equals(code)) {
-                return true;
-            }
-        }
-        return false;
+        return getStockByCode(code).getUnits() != 0;
     }
 
     private void addNewStock(String code, int units) {
