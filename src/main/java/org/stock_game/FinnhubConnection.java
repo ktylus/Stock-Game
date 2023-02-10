@@ -16,12 +16,14 @@ public class FinnhubConnection implements StockAPIConnection {
     @Override
     public BigDecimal getStockPriceByCompanyCode(String companyCode) throws StockAPIConnectionException {
         HttpResponse<String> response = sendRequestAndReturnResponse(constructRequest(companyCode));
-        if (response.statusCode() == HTTP_OK_STATUS_CODE) {
-            return findLatestClosePrice(response.body());
-        }
-        else {
+        if (response.statusCode() != HTTP_OK_STATUS_CODE) {
             throw new StockAPIConnectionException("HTTP Error. Status code: " + response.statusCode());
         }
+        BigDecimal stockPrice = findLatestClosePrice(response.body());
+        if (stockPrice.doubleValue() == 0) {
+            throw new StockAPIConnectionException("Invalid company code");
+        }
+        return stockPrice;
     }
 
     private String constructRequest(String companyCode) {
