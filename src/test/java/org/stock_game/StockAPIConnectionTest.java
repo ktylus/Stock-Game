@@ -20,7 +20,7 @@ class StockAPIConnectionTest {
     @Test
     void getStockPriceByIncorrectCompanyCode() {
         assertThrows(
-                StockAPIConnectionException.class,
+                StockAPIException.class,
                 () -> apiConnection.getStockPriceByCompanyCode("XXXXXXXXXXX")
         );
     }

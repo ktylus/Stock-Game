@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public interface StockAPIConnection {
 
-    BigDecimal getStockPriceByCompanyCode(String code) throws StockAPIConnectionException;
+    BigDecimal getStockPriceByCompanyCode(String code) throws StockAPIException;
 
     static StockAPIConnection createInstance() {
         return new FinnhubConnection();

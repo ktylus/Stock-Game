@@ -14,14 +14,14 @@ public class FinnhubConnection implements StockAPIConnection {
     private final int HTTP_OK_STATUS_CODE = 200;
 
     @Override
-    public BigDecimal getStockPriceByCompanyCode(String companyCode) throws StockAPIConnectionException {
+    public BigDecimal getStockPriceByCompanyCode(String companyCode) throws StockAPIException {
         HttpResponse<String> response = sendRequestAndReturnResponse(constructRequest(companyCode));
         if (response.statusCode() != HTTP_OK_STATUS_CODE) {
-            throw new StockAPIConnectionException("HTTP Error. Status code: " + response.statusCode());
+            throw new StockAPIException("HTTP Error. Status code: " + response.statusCode());
         }
         BigDecimal stockPrice = findLatestClosePrice(response.body());
         if (stockPrice.doubleValue() == 0) {
-            throw new StockAPIConnectionException("Invalid company code");
+            throw new StockAPIException("Invalid company code");
         }
         return stockPrice;
     }
@@ -30,17 +30,15 @@ public class FinnhubConnection implements StockAPIConnection {
         return "https://finnhub.io/api/v1/quote?symbol=" + companyCode + "&token=" + API_KEY;
     }
 
-    private HttpResponse<String> sendRequestAndReturnResponse(String request) throws StockAPIConnectionException {
+    private HttpResponse<String> sendRequestAndReturnResponse(String request) throws StockAPIException {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest httpRequest = HttpRequest.newBuilder()
                     .uri(new URI(request))
                     .build();
             return client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        } catch (URISyntaxException e) {
-            throw new StockAPIConnectionException("Incorrect company code entered");
-        } catch (InterruptedException | IOException e) {
-            throw new StockAPIConnectionException("Internal error");
+        } catch (Exception e) {
+            throw new StockAPIException("Internal error");
         }
     }
 

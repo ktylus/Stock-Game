@@ -44,19 +44,20 @@ public class Portfolio {
         }
     }
 
-    public void removeStock(String code, int units) throws PortfolioException {
-        StockInPortfolio stock = getStockByCode(code);
-        int ownedUnits = stock.getUnits();
-        if (units == 0) {
+    public void removeStock(String code, int unitsRemoved) throws PortfolioException {
+        if (unitsRemoved == 0) {
             return;
         }
-        if (units > ownedUnits) {
+
+        StockInPortfolio stock = getStockByCode(code);
+        int ownedUnits = stock.getUnits();
+        if (unitsRemoved > ownedUnits) {
             throw new PortfolioException("Attempted to remove more units of stock than owned.");
         }
 
         stocks.remove(stock);
-        if (ownedUnits - units > 0) {
-            stocks.add(new StockInPortfolio(code, ownedUnits - units));
+        if (ownedUnits - unitsRemoved > 0) {
+            stocks.add(new StockInPortfolio(code, ownedUnits - unitsRemoved));
         }
     }
 

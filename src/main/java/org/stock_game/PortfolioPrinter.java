@@ -63,7 +63,7 @@ public class PortfolioPrinter {
         BigDecimal stockPrice = new BigDecimal(0);
         try {
             stockPrice = apiConnection.getStockPriceByCompanyCode(stock.getCompanyCode());
-        } catch (StockAPIConnectionException e) {
+        } catch (StockAPIException e) {
             e.printStackTrace();
         }
         return stockPrice;
