@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="implemented Portfolio with unit tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="done PortfolioPrinter, without nice formatting">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -146,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675937015899</updated>
       <workItem from="1675937016915" duration="4099000" />
-      <workItem from="1676018544418" duration="7370000" />
+      <workItem from="1676018544418" duration="8163000" />
     </task>
     <task id="LOCAL-00001" summary="implemented first few classes">
       <created>1675944783613</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676028386857</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="done PortfolioPrinter, without nice formatting">
+      <created>1676030932718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676030932718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +195,8 @@
     <MESSAGE value="added error handling to FinnhubConnection class" />
     <MESSAGE value="small cleanup" />
     <MESSAGE value="implemented Portfolio with unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented Portfolio with unit tests" />
+    <MESSAGE value="done PortfolioPrinter, without nice formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="done PortfolioPrinter, without nice formatting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

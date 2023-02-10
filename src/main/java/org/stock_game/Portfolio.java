@@ -74,4 +74,9 @@ public class Portfolio {
         int unitsBeforeChange = existingStock.getUnits();
         existingStock.setUnits(unitsBeforeChange + units);
     }
+
+    public void display() {
+        PortfolioPrinter printer = new PortfolioPrinter(this);
+        printer.printContent();
+    }
 }

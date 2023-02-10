@@ -1,6 +1,5 @@
 package org.stock_game;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,10 +17,6 @@ class PortfolioTest {
         portfolio = new Portfolio();
         portfolio.addStock("IBM", 5);
         portfolio.addStock("TSLA", 10);
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test
