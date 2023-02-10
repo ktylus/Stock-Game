@@ -1,5 +1,8 @@
 package org.stock_game;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public class PortfolioManager {
 
     private Portfolio portfolio;
@@ -10,11 +13,55 @@ public class PortfolioManager {
         this.transactionHistory = transactionHistory;
     }
 
-    public void buyStock(String code, int units) {
+    public void buyStock(String code, int units) throws StockAPIException, PortfolioException {
+        if (units == 0) {
+            return;
+        }
 
+        BigDecimal stockPrice = getStockPrice(code);
+        if (canAfford(stockPrice, units)) {
+            portfolio.addStock(code, units);
+            transactionHistory.addTransaction(
+                    new Transaction(code, units, stockPrice, TransactionType.PURCHASE, LocalDate.now())
+            );
+            portfolio.setBalance(portfolio.getBalance().subtract(calculateTotalValue(stockPrice, units)));
+        }
+        else {
+            throw new PortfolioException("You can't afford " + units + " stocks of " + code);
+        }
     }
 
-    public void sellStock(String code, int units) {
+    private BigDecimal getStockPrice(String code) throws StockAPIException {
+        StockAPIConnection apiConnection = StockAPIConnection.createInstance();
+        BigDecimal stockPrice = apiConnection.getStockPriceByCompanyCode(code);
+        return stockPrice;
+    }
 
+    private boolean canAfford(BigDecimal unitPrice, int units) {
+        BigDecimal totalCost = calculateTotalValue(unitPrice, units);
+        return totalCost.compareTo(portfolio.getBalance()) <= 0;
+    }
+
+    private BigDecimal calculateTotalValue(BigDecimal unitPrice, int units) {
+        return unitPrice.multiply(new BigDecimal(units));
+    }
+
+    public void sellStock(String code, int units) throws PortfolioException, StockAPIException {
+        if (units == 0) {
+            return;
+        }
+
+        boolean haveEnoughUnits = units <= portfolio.getStockByCode(code).getUnits();
+        if (haveEnoughUnits) {
+            portfolio.removeStock(code, units);
+            BigDecimal unitPrice = getStockPrice(code);
+            transactionHistory.addTransaction(
+                    new Transaction(code, units, unitPrice, TransactionType.SALE, LocalDate.now())
+            );
+            portfolio.setBalance(portfolio.getBalance().add(calculateTotalValue(unitPrice, units)));
+        }
+        else {
+            throw new PortfolioException("You don't have " + units + " units of " + code);
+        }
     }
 }

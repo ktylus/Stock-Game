@@ -27,7 +27,7 @@ class PortfolioManagerTest {
 
     boolean checkIfPortfolioAndHistoryUnchanged() {
         return transactionHistory.getAmountOfTransactions() == 0 &&
-                portfolio.getAllStocks().size() == 0 &&
+                portfolio.getAllStocks().size() == 2 &&
                 portfolio.getBalance().doubleValue() == 1000 &&
                 portfolio.getAllStocks().get(0).getCompanyCode().equals("IBM") &&
                 portfolio.getAllStocks().get(0).getUnits() == 5 &&
@@ -56,16 +56,17 @@ class PortfolioManagerTest {
     }
 
     @Test
-    void buyZeroUnitsOfStock() {
+    void buyZeroUnitsOfStock() throws PortfolioException, StockAPIException {
         manager.buyStock("IBM", 0);
         assertTrue(checkIfPortfolioAndHistoryUnchanged());
     }
 
     @Test
-    void buyValidAmountOfOwnedStock() throws StockAPIException {
+    void buyValidAmountOfOwnedStock() throws StockAPIException, PortfolioException {
         BigDecimal IBMStockPrice = apiConnection.getStockPriceByCompanyCode("IBM");
         int unitsToBuy = STARTING_BALANCE.divideToIntegralValue(IBMStockPrice).intValue() / 2;
         manager.buyStock("IBM", unitsToBuy);
+        IBMStockPrice = transactionHistory.getLatestTransaction().unitPrice();
         BigDecimal expectedBalance = STARTING_BALANCE.subtract(IBMStockPrice.multiply(new BigDecimal(unitsToBuy)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(2, portfolio.getAllStocks().size());
@@ -73,10 +74,11 @@ class PortfolioManagerTest {
     }
 
     @Test
-    void buyValidAmountOfNewStock() throws StockAPIException {
+    void buyValidAmountOfNewStock() throws StockAPIException, PortfolioException {
         BigDecimal AAPLStockPrice = apiConnection.getStockPriceByCompanyCode("AAPL");
         int unitsToBuy = STARTING_BALANCE.divideToIntegralValue(AAPLStockPrice).intValue() / 2;
         manager.buyStock("AAPL", unitsToBuy);
+        AAPLStockPrice = transactionHistory.getLatestTransaction().unitPrice();
         BigDecimal expectedBalance = STARTING_BALANCE.subtract(AAPLStockPrice.multiply(new BigDecimal(unitsToBuy)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(3, portfolio.getAllStocks().size());
@@ -93,15 +95,15 @@ class PortfolioManagerTest {
     }
 
     @Test
-    void sellZeroUnitsOfStock() {
+    void sellZeroUnitsOfStock() throws PortfolioException, StockAPIException {
         manager.sellStock("IBM", 0);
         assertTrue(checkIfPortfolioAndHistoryUnchanged());
     }
 
     @Test
-    void sellValidAmountOfStock() throws StockAPIException {
-        BigDecimal IBMStockPrice = apiConnection.getStockPriceByCompanyCode("IBM");
+    void sellValidAmountOfStock() throws StockAPIException, PortfolioException {
         manager.sellStock("IBM", 2);
+        BigDecimal IBMStockPrice = transactionHistory.getLatestTransaction().unitPrice();
         BigDecimal expectedBalance = STARTING_BALANCE.add(IBMStockPrice.multiply(new BigDecimal(2)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(2, portfolio.getAllStocks().size());
@@ -109,9 +111,9 @@ class PortfolioManagerTest {
     }
 
     @Test
-    void sellExactlyOwnedAmountOfStock() throws StockAPIException {
-        BigDecimal TSLAStockPrice = apiConnection.getStockPriceByCompanyCode("TSLA");
+    void sellExactlyOwnedAmountOfStock() throws StockAPIException, PortfolioException {
         manager.sellStock("TSLA", 10);
+        BigDecimal TSLAStockPrice = transactionHistory.getLatestTransaction().unitPrice();
         BigDecimal expectedBalance = STARTING_BALANCE.add(TSLAStockPrice.multiply(new BigDecimal(10)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(1, portfolio.getAllStocks().size());
