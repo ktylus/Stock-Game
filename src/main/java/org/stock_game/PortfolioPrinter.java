@@ -14,7 +14,7 @@ public class PortfolioPrinter {
         stockPrices = new HashMap<>();
     }
 
-    public void printContent() {
+    public void printPortfolio() {
         printAllStocks();
         printBalance();
         printTotalAssetsValue();
@@ -67,12 +67,5 @@ public class PortfolioPrinter {
             e.printStackTrace();
         }
         return stockPrice;
-    }
-
-    public static void main(String[] args) {
-        PortfolioPrinter pp = new PortfolioPrinter(new Portfolio());
-        pp.portfolio.addStock("IBM", 5);
-        pp.portfolio.addStock("TSLA", 10);
-        pp.printContent();
     }
 }

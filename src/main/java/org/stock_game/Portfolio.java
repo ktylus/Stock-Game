@@ -78,6 +78,11 @@ public class Portfolio {
 
     public void display() {
         PortfolioPrinter printer = new PortfolioPrinter(this);
-        printer.printContent();
+        printer.printPortfolio();
+    }
+
+    public void displayBalance() {
+        PortfolioPrinter printer = new PortfolioPrinter(this);
+        printer.printBalance();
     }
 }
