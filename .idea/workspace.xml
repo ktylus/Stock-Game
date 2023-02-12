@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="implemented buying and selling stocks, fixed tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInformationPrinter.java" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added simple Client class for testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,7 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.PortfolioTest">
     <configuration name="PortfolioManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,6 +139,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="PortfolioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.PortfolioTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="StockAPIConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,29 +176,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.stock_game.StockAPIConnectionTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StockAPIConnectionTest.getStockPriceByIncorrectCompanyCode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.stock_game.StockAPIConnectionTest.getStockPriceByIncorrectCompanyCode&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PortfolioTest" />
         <item itemvalue="Gradle.Tests in 'org.stock_game'" />
         <item itemvalue="Gradle.PortfolioManagerTest" />
         <item itemvalue="Gradle.PortfolioManagerTest.buyInvalidStock" />
         <item itemvalue="Gradle.StockAPIConnectionTest" />
-        <item itemvalue="Gradle.StockAPIConnectionTest.getStockPriceByIncorrectCompanyCode" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +228,7 @@
       <updated>1675937015899</updated>
       <workItem from="1675937016915" duration="4099000" />
       <workItem from="1676018544418" duration="18448000" />
-      <workItem from="1676192257089" duration="3645000" />
+      <workItem from="1676192257089" duration="4919000" />
     </task>
     <task id="LOCAL-00001" summary="implemented first few classes">
       <created>1675944783613</created>
@@ -307,7 +307,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676056770825</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="implemented User">
+      <created>1676195926857</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676195926857</updated>
+    </task>
+    <task id="LOCAL-00013" summary="changed exception handling a bit">
+      <created>1676195963761</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676195963761</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added missing printing functionality">
+      <created>1676196008420</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676196008420</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added simple Client class for testing">
+      <created>1676196022117</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676196022117</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,18 +353,11 @@
     <MESSAGE value="added additional TransactionHistory functionality" />
     <MESSAGE value="small refactor" />
     <MESSAGE value="implemented buying and selling stocks, fixed tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented buying and selling stocks, fixed tests" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/stock_game/User.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="implemented User" />
+    <MESSAGE value="changed exception handling a bit" />
+    <MESSAGE value="added missing printing functionality" />
+    <MESSAGE value="added simple Client class for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added simple Client class for testing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

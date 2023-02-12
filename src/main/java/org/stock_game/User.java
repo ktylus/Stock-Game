@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class User {
 
-    private String username;
-    private Portfolio portfolio;
-    private TransactionHistory transactionHistory;
+    private final String username;
+    private final Portfolio portfolio;
+    private final TransactionHistory transactionHistory;
 
     User() {
         username = "";
@@ -46,9 +46,9 @@ public class User {
     private String[] getParameters(String command) {
         String[] parametersWithOperation = command.split(" ");
         String[] parameters = new String[parametersWithOperation.length - 1];
-        for (int i = 1; i < parametersWithOperation.length; i++) {
-            parameters[i - 1] = parametersWithOperation[i];
-        }
+        System.arraycopy(parametersWithOperation, 1,
+                parameters, 0,
+                parametersWithOperation.length - 1);
         return parameters;
     }
 

@@ -71,9 +71,13 @@ public class Portfolio {
     }
 
     private void addUnitsToExistingStock(String code, int units) {
-        StockInPortfolio existingStock = getStockByCode(code);
-        int unitsBeforeChange = existingStock.getUnits();
-        existingStock.setUnits(unitsBeforeChange + units);
+        int unitsBeforeChange = getStockByCode(code).getUnits();
+        try {
+            removeStock(code, unitsBeforeChange);
+        } catch (PortfolioException e) {
+            e.printStackTrace();
+        }
+        addNewStock(code, unitsBeforeChange + units);
     }
 
     public void display() {

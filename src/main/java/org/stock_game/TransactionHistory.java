@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TransactionHistory {
 
-    private List<Transaction> transactionHistory;
+    private final List<Transaction> transactionHistory;
 
     TransactionHistory() {
         transactionHistory = new ArrayList<>();

@@ -21,7 +21,7 @@ public class DAOUser {
     public User getUserByLogin(String login) {
         String sqlQuery = "SELECT login, hashed_password " +
                 "FROM public.\"Users\" " +
-                "WHERE login == \'" + login + "\'";
+                "WHERE login == '" + login + "'";
         ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
 
         // transaction history

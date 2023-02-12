@@ -5,8 +5,8 @@ import java.time.LocalDate;
 
 public class PortfolioManager {
 
-    private Portfolio portfolio;
-    private TransactionHistory transactionHistory;
+    private final Portfolio portfolio;
+    private final TransactionHistory transactionHistory;
 
     PortfolioManager(Portfolio portfolio, TransactionHistory transactionHistory) {
         this.portfolio = portfolio;
