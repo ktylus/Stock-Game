@@ -7,7 +7,7 @@ public class DBConnection {
     private Connection connection = null;
     private static DBConnection instance = null;
 
-    DBConnection() {
+    private DBConnection() {
         String jdbcConnectionString = "\"jdbc:postgresql://localhost:5432/test_stock_game\"";
         String user = "postgres";
         String password = "root";
@@ -26,14 +26,9 @@ public class DBConnection {
         return instance;
     }
 
-    public ResultSet executeSelectQuery(String sqlQuery) {
-        try {
-            Statement statement = connection.createStatement();
-            return statement.executeQuery(sqlQuery);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public ResultSet executeSelectQuery(String sqlQuery) throws SQLException {
+        Statement statement = connection.createStatement();
+        return statement.executeQuery(sqlQuery);
     }
 
     public static void main(String[] args) {
