@@ -2,6 +2,6 @@ package org.stock_game;
 
 public class Client {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        (new User()).play();
     }
 }
