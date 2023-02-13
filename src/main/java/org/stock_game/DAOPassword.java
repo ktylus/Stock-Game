@@ -22,14 +22,16 @@ public class DAOPassword {
     public String getPassword(String username) {
         String sqlQuery = "SELECT hashed_password " +
                 "FROM public.\"Users\" " +
-                "WHERE username == '" + username + "'";
+                "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            String password = result.getString("hashed_password");
-            return password;
+            while (result.next()) {
+                String password = result.getString("hashed_password");
+                return password;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return "";
+        return null;
     }
 }
