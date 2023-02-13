@@ -20,17 +20,36 @@ public class PortfolioPrinter {
         printTotalAssetsValue();
     }
 
-    private void displayStock(StockInPortfolio stock) {
-        BigDecimal stockPrice = getStockPrice(stock);
-        System.out.println(stock.getCompanyCode() + "  |  " + stock.getUnits() + "  |  " + stockPrice + '$');
-    }
-
     private void printAllStocks() {
         stockPrices = getAllStockPrices();
         System.out.println("Portfolio content: ");
         for (StockInPortfolio stock : portfolio.getAllStocks()) {
             displayStock(stock);
         }
+    }
+
+    private Map<String, BigDecimal> getAllStockPrices() {
+        Map<String, BigDecimal> stockPrices = new HashMap<>();
+        for (StockInPortfolio stock : portfolio.getAllStocks()) {
+            stockPrices.put(stock.getCompanyCode(), getStockPrice(stock));
+        }
+        return stockPrices;
+    }
+
+    private void displayStock(StockInPortfolio stock) {
+        BigDecimal stockPrice = getStockPrice(stock);
+        System.out.println(stock.getCompanyCode() + "  |  " + stock.getUnits() + "  |  " + stockPrice + '$');
+    }
+
+    private BigDecimal getStockPrice(StockInPortfolio stock) {
+        StockAPIConnection apiConnection = StockAPIConnection.createInstance();
+        BigDecimal stockPrice = new BigDecimal(0);
+        try {
+            stockPrice = apiConnection.getStockPriceByCompanyCode(stock.getCompanyCode());
+        } catch (StockAPIException e) {
+            e.printStackTrace();
+        }
+        return stockPrice;
     }
 
     public void printBalance() {
@@ -48,24 +67,5 @@ public class PortfolioPrinter {
             totalValue = totalValue.add(stockValue);
         }
         return totalValue;
-    }
-
-    private Map<String, BigDecimal> getAllStockPrices() {
-        Map<String, BigDecimal> stockPrices = new HashMap<>();
-        for (StockInPortfolio stock : portfolio.getAllStocks()) {
-            stockPrices.put(stock.getCompanyCode(), getStockPrice(stock));
-        }
-        return stockPrices;
-    }
-
-    private BigDecimal getStockPrice(StockInPortfolio stock) {
-        StockAPIConnection apiConnection = StockAPIConnection.createInstance();
-        BigDecimal stockPrice = new BigDecimal(0);
-        try {
-            stockPrice = apiConnection.getStockPriceByCompanyCode(stock.getCompanyCode());
-        } catch (StockAPIException e) {
-            e.printStackTrace();
-        }
-        return stockPrice;
     }
 }

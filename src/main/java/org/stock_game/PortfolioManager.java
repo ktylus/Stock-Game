@@ -14,18 +14,14 @@ public class PortfolioManager {
     }
 
     public void buyStock(String code, int units) {
-        if (units == 0) {
+        if (units <= 0) {
             return;
         }
 
         try {
             BigDecimal stockPrice = getStockPrice(code);
             if (canAfford(stockPrice, units)) {
-                portfolio.addStock(code, units);
-                transactionHistory.addTransaction(
-                        new Transaction(code, units, stockPrice, TransactionType.PURCHASE, LocalDate.now())
-                );
-                portfolio.setBalance(portfolio.getBalance().subtract(calculateTotalValue(stockPrice, units)));
+                buyStockWhenCanAfford(code, units, stockPrice);
             }
             else {
                 System.out.println("You can't afford " + units + " units of " + code);
@@ -37,8 +33,7 @@ public class PortfolioManager {
 
     private BigDecimal getStockPrice(String code) throws StockAPIException {
         StockAPIConnection apiConnection = StockAPIConnection.createInstance();
-        BigDecimal stockPrice = apiConnection.getStockPriceByCompanyCode(code);
-        return stockPrice;
+        return apiConnection.getStockPriceByCompanyCode(code);
     }
 
     private boolean canAfford(BigDecimal unitPrice, int units) {
@@ -46,30 +41,44 @@ public class PortfolioManager {
         return totalCost.compareTo(portfolio.getBalance()) <= 0;
     }
 
+    private void buyStockWhenCanAfford(String code, int units, BigDecimal stockPrice) {
+        portfolio.addStock(code, units);
+        transactionHistory.addTransaction(
+                new Transaction(code, units, stockPrice, TransactionType.PURCHASE, LocalDate.now())
+        );
+        BigDecimal balanceAfterTransaction = portfolio.getBalance().subtract(calculateTotalValue(stockPrice, units));
+        portfolio.setBalance(balanceAfterTransaction);
+    }
+
     private BigDecimal calculateTotalValue(BigDecimal unitPrice, int units) {
         return unitPrice.multiply(new BigDecimal(units));
     }
 
     public void sellStock(String code, int units) {
-        if (units == 0) {
+        if (units <= 0) {
             return;
         }
 
         boolean haveEnoughUnits = units <= portfolio.getStockByCode(code).getUnits();
         if (haveEnoughUnits) {
-            try {
-                portfolio.removeStock(code, units);
-                BigDecimal unitPrice = getStockPrice(code);
-                transactionHistory.addTransaction(
-                        new Transaction(code, units, unitPrice, TransactionType.SALE, LocalDate.now())
-                );
-                portfolio.setBalance(portfolio.getBalance().add(calculateTotalValue(unitPrice, units)));
-            } catch (StockAPIException | PortfolioException e) {
-                System.out.println(e.getMessage());
-            }
+            sellValidAmountOfStock(code, units);
         }
         else {
             System.out.println("You don't have " + units + " units of " + code);
+        }
+    }
+
+    private void sellValidAmountOfStock(String code, int units) {
+        try {
+            portfolio.removeStock(code, units);
+            BigDecimal unitPrice = getStockPrice(code);
+            transactionHistory.addTransaction(
+                    new Transaction(code, units, unitPrice, TransactionType.SALE, LocalDate.now())
+            );
+            BigDecimal balanceAfterTransaction = portfolio.getBalance().add(calculateTotalValue(unitPrice, units));
+            portfolio.setBalance(balanceAfterTransaction);
+        } catch (StockAPIException | PortfolioException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
