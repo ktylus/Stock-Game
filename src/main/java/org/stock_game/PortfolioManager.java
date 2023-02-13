@@ -28,7 +28,7 @@ public class PortfolioManager {
                 portfolio.setBalance(portfolio.getBalance().subtract(calculateTotalValue(stockPrice, units)));
             }
             else {
-                System.out.println("You can't afford " + units + " stocks of " + code);
+                System.out.println("You can't afford " + units + " units of " + code);
             }
         } catch (StockAPIException e) {
             System.out.println(e.getMessage());

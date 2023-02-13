@@ -37,10 +37,7 @@ class PortfolioManagerTest {
 
     @Test
     void buyInvalidStock() {
-        assertThrows(
-                StockAPIException.class,
-                () -> manager.buyStock("XXXXXXXXXXXXXX", 1)
-        );
+        manager.buyStock("XXXXXXXXXXXXXX", 1);
         assertTrue(checkIfPortfolioAndHistoryUnchanged());
     }
 
@@ -48,10 +45,7 @@ class PortfolioManagerTest {
     void buyMoreStockThanCanAfford() throws StockAPIException {
         BigDecimal IBMStockPrice = apiConnection.getStockPriceByCompanyCode("IBM");
         int unitsToBuy = STARTING_BALANCE.divideToIntegralValue(IBMStockPrice).intValue() + 1;
-        assertThrows(
-                PortfolioException.class,
-                () -> manager.buyStock("IBM", unitsToBuy)
-        );
+        manager.buyStock("IBM", unitsToBuy);
         assertTrue(checkIfPortfolioAndHistoryUnchanged());
     }
 
@@ -87,10 +81,7 @@ class PortfolioManagerTest {
 
     @Test
     void sellMoreStockThanOwned() {
-        assertThrows(
-                PortfolioException.class,
-                () -> manager.sellStock("IBM", 6)
-        );
+        manager.sellStock("IBM", 6);
         assertTrue(checkIfPortfolioAndHistoryUnchanged());
     }
 
