@@ -8,12 +8,13 @@ public class DBConnection {
     private static DBConnection instance = null;
 
     private DBConnection() {
-        String jdbcConnectionString = "\"jdbc:postgresql://localhost:5432/test_stock_game\"";
+        String jdbcConnectionString = "jdbc:postgresql://localhost:5432/test_stock_game";
         String user = "postgres";
         String password = "root";
         try {
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(jdbcConnectionString, user, password);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.err.println("Failed to establish database connection");
             e.printStackTrace();
         }
