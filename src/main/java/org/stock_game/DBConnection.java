@@ -12,9 +12,8 @@ public class DBConnection {
         String user = "postgres";
         String password = "root";
         try {
-            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(jdbcConnectionString, user, password);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println("Failed to establish database connection");
             e.printStackTrace();
         }
@@ -31,21 +30,4 @@ public class DBConnection {
         Statement statement = connection.createStatement();
         return statement.executeQuery(sqlQuery);
     }
-
-    public static void main(String[] args) {
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test_stock_game", "postgres", "root");
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM public.\"Users\"");
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString("login"));
-                System.out.println(resultSet.getString("hashed_password"));
-                System.out.println();
-            }
-            System.out.println("test_password".hashCode());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 }
