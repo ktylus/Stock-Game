@@ -8,10 +8,11 @@ public class Portfolio {
 
     private final List<StockInPortfolio> stocks;
     private BigDecimal balance;
+    private final String STARTING_BALANCE = "1000.00";
 
     Portfolio() {
         stocks = new ArrayList<>();
-        balance = new BigDecimal("1000.00");
+        balance = new BigDecimal(STARTING_BALANCE);
     }
 
     public StockInPortfolio getStockByCode(String code) {
@@ -56,8 +57,9 @@ public class Portfolio {
         }
 
         stocks.remove(stock);
-        if (ownedUnits - unitsRemoved > 0) {
-            stocks.add(new StockInPortfolio(code, ownedUnits - unitsRemoved));
+        int stocksAfterRemoval = ownedUnits - unitsRemoved;
+        if (stocksAfterRemoval > 0) {
+            stocks.add(new StockInPortfolio(code, stocksAfterRemoval));
         }
     }
 
@@ -88,5 +90,9 @@ public class Portfolio {
     public void displayBalance() {
         PortfolioPrinter printer = new PortfolioPrinter(this);
         printer.printBalance();
+    }
+
+    public void updateInDB(String username) {
+        (new DBUpdater(username)).updatePortfolio(this);
     }
 }
