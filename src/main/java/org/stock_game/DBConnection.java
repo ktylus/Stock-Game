@@ -4,11 +4,15 @@ import java.sql.*;
 
 public class DBConnection {
 
-    private Connection connection = null;
+    private Connection connection;
     private static DBConnection instance = null;
+    private String database;
+    private static final String DEFAULT_DATABASE = "stock_game";
 
     private DBConnection() {
-        String jdbcConnectionString = "jdbc:postgresql://localhost:5432/test_stock_game";
+        connection = null;
+        this.database = DEFAULT_DATABASE;
+        String jdbcConnectionString = "jdbc:postgresql://localhost:5432/" + database;
         String user = "postgres";
         String password = "root";
         try {
@@ -17,6 +21,14 @@ public class DBConnection {
             System.err.println("Failed to establish database connection");
             e.printStackTrace();
         }
+    }
+
+    public static DBConnection getInstance(String database) {
+        if (instance == null || !instance.database.equals(database)) {
+            instance = new DBConnection();
+            instance.database = database;
+        }
+        return instance;
     }
 
     public static DBConnection getInstance() {
