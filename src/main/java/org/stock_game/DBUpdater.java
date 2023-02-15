@@ -1,8 +1,6 @@
 package org.stock_game;
 
-import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class DBUpdater {
 
@@ -11,6 +9,11 @@ public class DBUpdater {
 
     DBUpdater(String username) {
         dbConnection = DBConnection.getInstance();
+        this.username = username;
+    }
+
+    DBUpdater(String username, String database) {
+        dbConnection = DBConnection.getInstance(database);
         this.username = username;
     }
 
