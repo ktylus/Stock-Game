@@ -21,37 +21,37 @@ public class DAOPortfolio {
     }
 
     public Portfolio getPortfolio(String username) {
+        Portfolio portfolio = null;
         String sqlQuery = "SELECT company_code, units " +
                 "FROM public.\"Portfolios\" " +
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            Portfolio portfolio = new Portfolio();
+            portfolio = new Portfolio();
             portfolio.setBalance(getBalance(username));
             while (result.next()) {
                 String companyCode = result.getString("company_code");
                 int units = result.getInt("units");
                 portfolio.addStock(companyCode, units);
             }
-            return portfolio;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return portfolio;
     }
 
     private BigDecimal getBalance(String username) {
+        BigDecimal balance = null;
         String sqlQuery = "SELECT balance " +
                 "FROM public.\"Balances\" " +
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            while (result.next()) {
-                return new BigDecimal(result.getString("balance"));
-            }
+            result.next();
+            balance = new BigDecimal(result.getString("balance"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return balance;
     }
 }

@@ -20,18 +20,17 @@ public class DAOPassword {
     }
 
     public String getPassword(String username) {
+        String password = null;
         String sqlQuery = "SELECT hashed_password " +
                 "FROM public.\"Users\" " +
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            while (result.next()) {
-                String password = result.getString("hashed_password");
-                return password;
-            }
+            result.next();
+            password = result.getString("hashed_password");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return password;
     }
 }
