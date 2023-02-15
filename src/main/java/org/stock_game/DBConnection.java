@@ -30,4 +30,9 @@ public class DBConnection {
         Statement statement = connection.createStatement();
         return statement.executeQuery(sqlQuery);
     }
+
+    public void executeDMLQuery(String sqlQuery) throws SQLException {
+        Statement statement = connection.createStatement();
+        statement.execute(sqlQuery);
+    }
 }
