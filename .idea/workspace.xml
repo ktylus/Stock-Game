@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="refactored StockInPortfolio into a record (unnecessary accesors removed)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPortfolioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOTransactionHistoryTest.java" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="fixed choosing database to connect in DBConnection">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DBUpdaterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DBUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,79 +96,129 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DBConnection">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.Client" />
-      <module name="stock_game_project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.Tests in 'org.stock_game'">
+    <configuration name="DBUpdaterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.DBUpdaterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="DAOPassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.DAOPassword" />
-      <module name="stock_game_project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="DBUpdaterTest.registerValidAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.DBUpdaterTest.registerValidAccount&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="DBConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.DBConnection" />
-      <module name="stock_game_project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="DBUpdaterTest.updatePortfolio" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.DBUpdaterTest.updatePortfolio&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="DBUpdater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.DBUpdater" />
-      <module name="stock_game_project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="DBUpdaterTest.updateTransactionHistory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.DBUpdaterTest.updateTransactionHistory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="SecurityUtilities" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.SecurityUtilities" />
-      <module name="stock_game_project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'org.stock_game'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stock_game.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DBConnection" />
-        <item itemvalue="Application.SecurityUtilities" />
-        <item itemvalue="Application.DBUpdater" />
-        <item itemvalue="Application.DAOPassword" />
-        <item itemvalue="Application.Client" />
+        <item itemvalue="Gradle.Tests in 'org.stock_game'" />
+        <item itemvalue="Gradle.DBUpdaterTest" />
+        <item itemvalue="Gradle.DBUpdaterTest.updateTransactionHistory" />
+        <item itemvalue="Gradle.DBUpdaterTest.updatePortfolio" />
+        <item itemvalue="Gradle.DBUpdaterTest.registerValidAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +237,7 @@
       <workItem from="1676284554277" duration="16667000" />
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
-      <workItem from="1676446509899" duration="8150000" />
+      <workItem from="1676446509899" duration="14569000" />
     </task>
     <task id="LOCAL-00001" summary="implemented first few classes">
       <created>1675944783613</created>
@@ -472,22 +512,76 @@
       <option name="project" value="LOCAL" />
       <updated>1676451572331</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added getPasswordSalt">
+      <created>1676463183112</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463183112</updated>
+    </task>
+    <task id="LOCAL-00041" summary="made DAOs not being singletons">
+      <created>1676463212533</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463212533</updated>
+    </task>
+    <task id="LOCAL-00042" summary="changed password correctness check after including salt">
+      <created>1676463241406</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463241406</updated>
+    </task>
+    <task id="LOCAL-00043" summary="added possibility to connect to other DBs in DBConnector (for test purposes)">
+      <created>1676463272218</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463272218</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added possibility to connect to other DBs in DBUpdater (for test purposes)">
+      <created>1676463284863</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463284863</updated>
+    </task>
+    <task id="LOCAL-00045" summary="added missing methods to TransactionHistory">
+      <created>1676463329138</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463329138</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added DAO unit tests">
+      <created>1676466922856</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466922856</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fixed DAOPassword and DAOPortfolio">
+      <created>1676466944967</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466944967</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fixed choosing database to connect in DBConnection">
+      <created>1676466964972</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466964972</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="small details" />
-    <MESSAGE value="changed SQL dialect to PostgreSQL" />
-    <MESSAGE value="changed DAOUser to DAOPassword" />
-    <MESSAGE value="done Client and most of Authenticator" />
-    <MESSAGE value="changed exception handling logic in DBConnection" />
-    <MESSAGE value="added PostgreSQL gradle dependency" />
-    <MESSAGE value="fixed DAOPassword" />
-    <MESSAGE value="added DAOPortfolio" />
-    <MESSAGE value="modified tests to fit changed exception handling" />
     <MESSAGE value="fixed JDBC connection string" />
     <MESSAGE value="PortfolioManager and Printer refactor" />
     <MESSAGE value="changed StockInPortfolio into a record" />
@@ -504,7 +598,27 @@
     <MESSAGE value="added DAOTransactionHistory" />
     <MESSAGE value="refactored DAOs" />
     <MESSAGE value="refactored StockInPortfolio into a record (unnecessary accesors removed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored StockInPortfolio into a record (unnecessary accesors removed)" />
+    <MESSAGE value="added getPasswordSalt" />
+    <MESSAGE value="made DAOs not being singletons" />
+    <MESSAGE value="changed password correctness check after including salt" />
+    <MESSAGE value="added possibility to connect to other DBs in DBConnector (for test purposes)" />
+    <MESSAGE value="added possibility to connect to other DBs in DBUpdater (for test purposes)" />
+    <MESSAGE value="added missing methods to TransactionHistory" />
+    <MESSAGE value="added DAO unit tests" />
+    <MESSAGE value="fixed DAOPassword and DAOPortfolio" />
+    <MESSAGE value="fixed choosing database to connect in DBConnection" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed choosing database to connect in DBConnection" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
