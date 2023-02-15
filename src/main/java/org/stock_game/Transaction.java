@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public record Transaction(String companyCode, int units, BigDecimal unitPrice, TransactionType type, LocalDate date) {
 
-    public void display() {
+    public void print() {
         System.out.println(companyCode + "  |  " + units + "  |  " + unitPrice + "  |  " + type + "  |  " + date);
     }
 }

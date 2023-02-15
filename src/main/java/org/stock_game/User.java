@@ -8,10 +8,10 @@ public class User {
     private final Portfolio portfolio;
     private final TransactionHistory transactionHistory;
 
-    User() {
-        username = "";
-        portfolio = new Portfolio();
-        transactionHistory = new TransactionHistory();
+    User(String username, Portfolio portfolio, TransactionHistory transactionHistory) {
+        this.username = username;
+        this.portfolio = portfolio;
+        this.transactionHistory = transactionHistory;
     }
 
     public void play() {
@@ -21,6 +21,7 @@ public class User {
             selectOperation(command);
             command = scanner.nextLine();
         }
+        updateInDB();
     }
 
     private void selectOperation(String command) {
@@ -28,11 +29,10 @@ public class User {
         String[] parameters = getParameters(command);
 
         switch (operation) {
-            case "balance" -> displayBalance();
-            case "portfolio" -> displayPortfolio();
-            case "lastTransaction" -> displayLastTransaction();
-            case "transactionHistory" -> displayTransactionHistory(parameters);
-            case "price" -> displayStockPrice(parameters);
+            case "balance" -> printBalance();
+            case "portfolio" -> printPortfolio();
+            case "transactionHistory" -> printTransactionHistory(parameters);
+            case "price" -> printStockPrice(parameters);
             case "buy" -> buyStock(parameters);
             case "sell" -> sellStock(parameters);
             default -> System.out.println("Invalid operation");
@@ -52,24 +52,27 @@ public class User {
         return parameters;
     }
 
-    private void displayBalance() {
+    private void printBalance() {
+        printUsername();
         portfolio.displayBalance();
     }
 
-    private void displayPortfolio() {
+    private void printPortfolio() {
+        printUsername();
         portfolio.display();
     }
 
-    private void displayLastTransaction() {
-        transactionHistory.getLatestTransaction().display();
-    }
-
-    private void displayTransactionHistory(String[] parameters) {
+    private void printTransactionHistory(String[] parameters) {
+        printUsername();
         int numberOfTransactions = Integer.parseInt(parameters[0]);
-        transactionHistory.display(numberOfTransactions);
+        transactionHistory.print(numberOfTransactions);
     }
 
-    private void displayStockPrice(String[] parameters) {
+    private void printUsername() {
+        System.out.println("User: " + username);
+    }
+
+    private void printStockPrice(String[] parameters) {
         String companyCode = parameters[0];
         (new StockInformationPrinter()).printStockPrice(companyCode);
     }
@@ -84,5 +87,10 @@ public class User {
         String companyCode = parameters[0];
         int units = Integer.parseInt(parameters[1]);
         (new PortfolioManager(portfolio, transactionHistory)).sellStock(companyCode, units);
+    }
+
+    private void updateInDB() {
+        portfolio.updateInDB(username);
+        transactionHistory.updateInDB(username);
     }
 }
