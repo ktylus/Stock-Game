@@ -53,7 +53,8 @@ public class DBUpdater {
     }
 
     private void deleteOldEntries(String tableName) throws SQLException {
-        String sqlQuery = "DELETE FROM public.\"" + tableName + "\"";
+        String sqlQuery = "DELETE FROM public.\"" + tableName + "\" " +
+                "WHERE username LIKE '" + username + "'";
         dbConnection.executeDMLQuery(sqlQuery);
     }
 
