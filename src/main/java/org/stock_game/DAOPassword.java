@@ -22,8 +22,10 @@ public class DAOPassword {
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            result.next();
-            password = result.getString("hashed_password");
+            boolean hasItems = result.next();
+            if (hasItems) {
+                password = result.getString("hashed_password");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -37,8 +39,10 @@ public class DAOPassword {
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            result.next();
-            salt = result.getString("salt");
+            boolean hasItems = result.next();
+            if (hasItems) {
+                salt = result.getString("salt");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
