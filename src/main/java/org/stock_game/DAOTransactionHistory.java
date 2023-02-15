@@ -7,18 +7,14 @@ import java.time.LocalDate;
 
 public class DAOTransactionHistory {
 
-    private static DAOTransactionHistory instance;
     private final DBConnection dbConnection;
 
-    private DAOTransactionHistory() {
+    DAOTransactionHistory() {
         dbConnection = DBConnection.getInstance();
     }
 
-    public static DAOTransactionHistory getInstance() {
-        if (instance == null) {
-            instance = new DAOTransactionHistory();
-        }
-        return instance;
+    DAOTransactionHistory(String database) {
+        dbConnection = DBConnection.getInstance(database);
     }
 
     public TransactionHistory getTransactionHistory(String username) {

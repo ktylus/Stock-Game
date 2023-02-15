@@ -6,18 +6,14 @@ import java.sql.SQLException;
 
 public class DAOPortfolio {
 
-    private static DAOPortfolio instance;
     private final DBConnection dbConnection;
 
-    private DAOPortfolio() {
+    DAOPortfolio() {
         dbConnection = DBConnection.getInstance();
     }
 
-    public static DAOPortfolio getInstance() {
-        if (instance == null) {
-            instance = new DAOPortfolio();
-        }
-        return instance;
+    DAOPortfolio(String database) {
+        dbConnection = DBConnection.getInstance(database);
     }
 
     public Portfolio getPortfolio(String username) {
