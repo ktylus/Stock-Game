@@ -5,18 +5,14 @@ import java.sql.SQLException;
 
 public class DAOPassword {
 
-    private static DAOPassword instance;
     private final DBConnection dbConnection;
 
-    private DAOPassword() {
+    DAOPassword() {
         dbConnection = DBConnection.getInstance();
     }
 
-    public static DAOPassword getInstance() {
-        if (instance == null) {
-            instance = new DAOPassword();
-        }
-        return instance;
+    DAOPassword(String database) {
+        dbConnection = DBConnection.getInstance(database);
     }
 
     public String getPassword(String username) {
@@ -32,5 +28,20 @@ public class DAOPassword {
             e.printStackTrace();
         }
         return password;
+    }
+
+    public String getPasswordSalt(String username) {
+        String salt = null;
+        String sqlQuery = "SELECT salt " +
+                "FROM public.\"Users\" " +
+                "WHERE username LIKE '" + username + "'";
+        try {
+            ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
+            result.next();
+            salt = result.getString("salt");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return salt;
     }
 }
