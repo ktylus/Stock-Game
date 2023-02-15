@@ -59,7 +59,7 @@ public class PortfolioManager {
             return;
         }
 
-        boolean haveEnoughUnits = units <= portfolio.getStockByCode(code).getUnits();
+        boolean haveEnoughUnits = units <= portfolio.getStockByCode(code).units();
         if (haveEnoughUnits) {
             sellValidAmountOfStock(code, units);
         }

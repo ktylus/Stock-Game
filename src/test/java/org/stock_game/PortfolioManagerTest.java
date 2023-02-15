@@ -29,10 +29,10 @@ class PortfolioManagerTest {
         return transactionHistory.getAmountOfTransactions() == 0 &&
                 portfolio.getAllStocks().size() == 2 &&
                 portfolio.getBalance().doubleValue() == 1000 &&
-                portfolio.getAllStocks().get(0).getCompanyCode().equals("IBM") &&
-                portfolio.getAllStocks().get(0).getUnits() == 5 &&
-                portfolio.getAllStocks().get(1).getCompanyCode().equals("TSLA") &&
-                portfolio.getAllStocks().get(1).getUnits() == 10;
+                portfolio.getAllStocks().get(0).companyCode().equals("IBM") &&
+                portfolio.getAllStocks().get(0).units() == 5 &&
+                portfolio.getAllStocks().get(1).companyCode().equals("TSLA") &&
+                portfolio.getAllStocks().get(1).units() == 10;
     }
 
     @Test

@@ -22,15 +22,15 @@ class PortfolioTest {
     @Test
     void getStockInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("TSLA");
-        assertEquals(10, stock.getUnits());
-        assertEquals("TSLA", stock.getCompanyCode());
+        assertEquals(10, stock.units());
+        assertEquals("TSLA", stock.companyCode());
     }
 
     @Test
     void getStockNotInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("ZZZ");
-        assertEquals(0, stock.getUnits());
-        assertEquals("ZZZ", stock.getCompanyCode());
+        assertEquals(0, stock.units());
+        assertEquals("ZZZ", stock.companyCode());
     }
 
     @Test
@@ -38,10 +38,10 @@ class PortfolioTest {
         List<StockInPortfolio> allStocks = portfolio.getAllStocks();
         StockInPortfolio firstStock = allStocks.get(0);
         StockInPortfolio secondStock = allStocks.get(1);
-        assertEquals("IBM", firstStock.getCompanyCode());
-        assertEquals(5, firstStock.getUnits());
-        assertEquals("TSLA", secondStock.getCompanyCode());
-        assertEquals(10, secondStock.getUnits());
+        assertEquals("IBM", firstStock.companyCode());
+        assertEquals(5, firstStock.units());
+        assertEquals("TSLA", secondStock.companyCode());
+        assertEquals(10, secondStock.units());
     }
 
     @Test
@@ -60,28 +60,28 @@ class PortfolioTest {
     @Test
     void addUnitsToExistingStock() {
         portfolio.addStock("IBM", 2);
-        assertEquals(7, portfolio.getStockByCode("IBM").getUnits());
+        assertEquals(7, portfolio.getStockByCode("IBM").units());
         assertEquals(2, portfolio.getAllStocks().size());
     }
 
     @Test
     void addNewStock() {
         portfolio.addStock("AAPL", 5);
-        assertEquals(5, portfolio.getStockByCode("AAPL").getUnits());
+        assertEquals(5, portfolio.getStockByCode("AAPL").units());
         assertEquals(3, portfolio.getAllStocks().size());
     }
 
     @Test
     void removeAllUnitsOfStock() throws PortfolioException {
         portfolio.removeStock("IBM", 5);
-        assertEquals(0, portfolio.getStockByCode("IBM").getUnits());
+        assertEquals(0, portfolio.getStockByCode("IBM").units());
         assertEquals(1, portfolio.getAllStocks().size());
     }
 
     @Test
     void removeNotAllUnitsOfStock() throws PortfolioException {
         portfolio.removeStock("IBM", 3);
-        assertEquals(2, portfolio.getStockByCode("IBM").getUnits());
+        assertEquals(2, portfolio.getStockByCode("IBM").units());
         assertEquals(2, portfolio.getAllStocks().size());
     }
 
@@ -96,7 +96,7 @@ class PortfolioTest {
     @Test
     void removeZeroOfOwnedStock() throws PortfolioException {
         portfolio.removeStock("IBM", 0);
-        assertEquals(5, portfolio.getStockByCode("IBM").getUnits());
+        assertEquals(5, portfolio.getStockByCode("IBM").units());
         assertEquals(2, portfolio.getAllStocks().size());
     }
 

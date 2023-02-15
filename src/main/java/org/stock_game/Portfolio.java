@@ -17,7 +17,7 @@ public class Portfolio {
 
     public StockInPortfolio getStockByCode(String code) {
         for (StockInPortfolio stock : stocks) {
-            if (stock.getCompanyCode().equals(code)) {
+            if (stock.companyCode().equals(code)) {
                 return stock;
             }
         }
@@ -51,7 +51,7 @@ public class Portfolio {
         }
 
         StockInPortfolio stock = getStockByCode(code);
-        int ownedUnits = stock.getUnits();
+        int ownedUnits = stock.units();
         if (unitsRemoved > ownedUnits) {
             throw new PortfolioException("Attempted to remove more units of stock than owned.");
         }
@@ -64,7 +64,7 @@ public class Portfolio {
     }
 
     private boolean containsStockWithCode(String code) {
-        return getStockByCode(code).getUnits() != 0;
+        return getStockByCode(code).units() != 0;
     }
 
     private void addNewStock(String code, int units) {
@@ -73,7 +73,7 @@ public class Portfolio {
     }
 
     private void addUnitsToExistingStock(String code, int units) {
-        int unitsBeforeChange = getStockByCode(code).getUnits();
+        int unitsBeforeChange = getStockByCode(code).units();
         try {
             removeStock(code, unitsBeforeChange);
         } catch (PortfolioException e) {
