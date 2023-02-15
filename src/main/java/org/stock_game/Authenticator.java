@@ -25,9 +25,10 @@ public class Authenticator {
     }
 
     private boolean isPasswordCorrect(String password) {
-        DAOPassword daoPassword = DAOPassword.getInstance();
-        String passwordInDB = daoPassword.getPassword(username);
-        return Integer.parseInt(passwordInDB) == password.hashCode();
+        String passwordInDB = (new DAOPassword()).getPassword(username);
+        String passwordSalt = (new DAOPassword()).getPasswordSalt(username);
+        String expectedPassword = SecurityUtilities.getSecurePassword(password, passwordSalt);
+        return passwordInDB.equals(expectedPassword);
     }
 
     public void register() {
@@ -47,8 +48,8 @@ public class Authenticator {
     }
 
     private User getUserFromDB() {
-        Portfolio portfolio = DAOPortfolio.getInstance().getPortfolio(username);
-        TransactionHistory transactionHistory = DAOTransactionHistory.getInstance().getTransactionHistory(username);
+        Portfolio portfolio = (new DAOPortfolio()).getPortfolio(username);
+        TransactionHistory transactionHistory = (new DAOTransactionHistory()).getTransactionHistory(username);
         return new User(username, portfolio, transactionHistory);
     }
 }
