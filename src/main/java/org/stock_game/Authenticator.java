@@ -1,17 +1,17 @@
 package org.stock_game;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Authenticator {
 
     private final String username;
-    private User user;
 
     Authenticator(String username) {
         this.username = username;
     }
 
-    public void LogIn() {
+    public void logIn() {
         System.out.println("Enter password:");
         Scanner scanner = new Scanner(System.in);
         String password = scanner.nextLine();
@@ -20,7 +20,8 @@ public class Authenticator {
             password = scanner.nextLine();
         }
         System.out.println("Logged in successfully");
-        user = getUserFromDB();
+        User user = getUserFromDB();
+        user.play();
     }
 
     private boolean isPasswordCorrect(String password) {
@@ -29,11 +30,25 @@ public class Authenticator {
         return Integer.parseInt(passwordInDB) == password.hashCode();
     }
 
-    private User getUserFromDB() {
+    public void register() {
+        System.out.println("Enter password:");
+        Scanner scanner = new Scanner(System.in);
+        String password = scanner.nextLine();
 
+        String passwordSalt = SecurityUtilities.getSalt();
+        String securePassword = SecurityUtilities.getSecurePassword(password, passwordSalt);
+        try {
+            (new DBUpdater(username)).registerAccount(securePassword, passwordSalt);
+        } catch (SQLException e) {
+            System.out.println("Encountered an error while trying to register the account");
+            e.printStackTrace();
+        }
+        System.out.println("Account registered successfully");
     }
 
-    public User getUser() {
-        return user;
+    private User getUserFromDB() {
+        Portfolio portfolio = DAOPortfolio.getInstance().getPortfolio(username);
+        TransactionHistory transactionHistory = DAOTransactionHistory.getInstance().getTransactionHistory(username);
+        return new User(username, portfolio, transactionHistory);
     }
 }
