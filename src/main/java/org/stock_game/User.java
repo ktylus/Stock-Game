@@ -16,9 +16,10 @@ public class User {
 
     public void play() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Type \"help\" to display available commands.");
+        System.out.println("Enter command:");
         String command;
         do {
-            System.out.println("Enter command:");
             command = scanner.nextLine();
             executeOperation(command);
             updateInDB();
@@ -36,6 +37,7 @@ public class User {
             case "price" -> printStockPrice(parameters);
             case "buy" -> buyStock(parameters);
             case "sell" -> sellStock(parameters);
+            case "help" -> printAvailableCommands();
             default -> System.out.println("Invalid operation.");
         }
     }
@@ -115,5 +117,15 @@ public class User {
         } catch (NumberFormatException ignored) {
         }
         return isInteger;
+    }
+
+    public void printAvailableCommands() {
+        System.out.println("Available commands: ");
+        System.out.println("\"balance\" - Displays your balance.");
+        System.out.println("\"portfolio\" - Displays content of your portfolio.");
+        System.out.println("\"history <number_of_transactions>\" - Displays your transaction history.");
+        System.out.println("\"price <company_code>\" - Displays the price of a given stock.");
+        System.out.println("\"buy <company_code> <units_of_stock>\" - Buys certain amount of stocks of a given company.");
+        System.out.println("\"sell <company_code> <units_of_stock>\" - Sells certain amount of stocks of a given company.");
     }
 }
