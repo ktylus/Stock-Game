@@ -7,7 +7,7 @@ import java.util.HexFormat;
 
 public class SecurityUtilities {
 
-    public static String getSecurePassword(String password, String salt) {
+    public static String getHashedPassword(String password, String salt) {
         String securePassword = null;
         try {
             String saltedPassword = password + salt;
