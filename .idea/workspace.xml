@@ -4,218 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="big refactor">
-      <change afterPath="$PROJECT_DIR$/codemr/idmap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/graphs/all-by-modularity.cmr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/graphs/all-by-package.cmr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/graphs/all-by-project-module.cmr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/graphs/all-inheritance.cmr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/graphs/all-ug.cmr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-modularity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-modularity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-package.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-project-module.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-by-project-module.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-inheritance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-inheritance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-ug.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/all-ug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/graph_htmls/graphlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/Xdonut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/circlepack.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/dependency.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/donut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/donutcharts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/donutchartssimple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/graphs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/metricdescriptions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/lbd/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/metricchartmethod.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/metricchartpackage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/metricchartx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/defaultclassmetrics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/overview_metric_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/packagedependency.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/summary_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/sunburst_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/modeldata/table_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/reportforprint.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/sunburst.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/htmlx/treemap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/html_report_stock_game_projectmain/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/helptip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/light-bootstrap-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/css/pe-icon-7-stroke.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/fonts/Pe-icon-7-stroke.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/fonts/Pe-icon-7-stroke.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/fonts/Pe-icon-7-stroke.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/fonts/Pe-icon-7-stroke.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/codemr-lg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/codemr-sm-32x32.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/codemr-sm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/default-avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/loading-bubbles.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/new_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/img/sidebar-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/bootstrap-checkbox-radio-switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/bootstrap-notify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/bootstrap-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/jquery-1.10.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/js/light-bootstrap-dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_alerts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_cards.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_chartist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_checkbox-radio-switch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_footers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_inputs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_navbars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_responsive.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_sidebar-and-main-panel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_cards.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_chartist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_inputs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_morphing-buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_navbars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_social-buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_tabs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_transparency.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/lbd/mixins/_vendor-prefixes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/assets/sass/light-bootstrap-dashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/barchartstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/graph.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/helptip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/legend.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/treemap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/css/vis.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/animation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/codemr-codes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/codemr-embedded.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/codemr-ie7-codes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/codemr-ie7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/css/codemr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/font/codemr.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/font/codemr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/font/codemr.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/font/codemr.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/font-codemr/font/codemr.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/roboto-v15-cyrillic-ext_vietnamese_latin_cyrillic_latin-ext_greek-ext_greek-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/fonts/robotofonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/img/eqGraphlegend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/img/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/circlepack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/d3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/d3.tip.v0.6.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/dependency_wheel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/donut3d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/eq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/metric_definitions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/metricchart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/sunburst.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/treemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/vis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/vis_eq_cluster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/html/js/vis_eq_graph_base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/Xdonut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/circlepack.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/dependency.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/donut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/donutcharts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/donutchartssimple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/graphs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/metricdescriptions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/lbd/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/metricchartmethod.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/metricchartpackage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/metricchartx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/defaultclassmetrics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/overview_metric_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/packagedependency.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/summary_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/sunburst_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/modeldata/table_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/reportforprint.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/sunburst.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/htmlx/treemap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/main_report/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/html/workingsets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/stock_game_project.mdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/stock_game_project.qa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codemr/stock_game_project/stock_game_project.ws" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added static code analysis report (CodeMR IntelliJ plugin)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +104,7 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.stock_game.Client" />
       <module name="stock_game_project.main" />
@@ -351,29 +141,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DBUpdaterTest.updateTransactionHistory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.stock_game.DBUpdaterTest.updateTransactionHistory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'org.stock_game'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -397,16 +164,19 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project/html/main_report/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project 2/html/main_report/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Gradle.Tests in 'org.stock_game'" />
         <item itemvalue="Gradle.DBUpdaterTest" />
-        <item itemvalue="Gradle.DBUpdaterTest.updateTransactionHistory" />
       </list>
     </recent_temporary>
   </component>
@@ -426,14 +196,7 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="13825000" />
-    </task>
-    <task id="LOCAL-00013" summary="changed exception handling a bit">
-      <created>1676195963761</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1676195963761</updated>
+      <workItem from="1676535528214" duration="14535000" />
     </task>
     <task id="LOCAL-00014" summary="added missing printing functionality">
       <created>1676196008420</created>
@@ -771,14 +534,20 @@
       <option name="project" value="LOCAL" />
       <updated>1676555536794</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="added static code analysis report (CodeMR IntelliJ plugin)">
+      <created>1676556561108</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1676556561108</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added DAOTransactionHistory" />
     <MESSAGE value="refactored DAOs" />
     <MESSAGE value="refactored StockInPortfolio into a record (unnecessary accesors removed)" />
     <MESSAGE value="added getPasswordSalt" />
@@ -803,7 +572,8 @@
     <MESSAGE value="changed method name" />
     <MESSAGE value="improved exception handling in register method" />
     <MESSAGE value="big refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="big refactor" />
+    <MESSAGE value="added static code analysis report (CodeMR IntelliJ plugin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added static code analysis report (CodeMR IntelliJ plugin)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
