@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="fixed DBUpdater deleting all records on update">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="simplified user history command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,28 +228,7 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="1596000" />
-    </task>
-    <task id="LOCAL-00002" summary="added error handling to FinnhubConnection class">
-      <created>1675950392300</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675950392300</updated>
-    </task>
-    <task id="LOCAL-00003" summary="small cleanup">
-      <created>1675950833418</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675950833418</updated>
-    </task>
-    <task id="LOCAL-00004" summary="implemented Portfolio with unit tests">
-      <created>1676028386857</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1676028386857</updated>
+      <workItem from="1676535528214" duration="4198000" />
     </task>
     <task id="LOCAL-00005" summary="done PortfolioPrinter, without nice formatting">
       <created>1676030932718</created>
@@ -571,16 +552,34 @@
       <option name="project" value="LOCAL" />
       <updated>1676470047015</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixed history out of bounds bug">
+      <created>1676539206595</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1676539206596</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fixed null balance on account registration">
+      <created>1676539222814</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1676539222814</updated>
+    </task>
+    <task id="LOCAL-00053" summary="simplified user history command">
+      <created>1676539266668</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1676539266668</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed StockInPortfolio into a record" />
-    <MESSAGE value="added STARTING_BALANCE explaining final variable" />
-    <MESSAGE value="implemented DAOTransactionHistory" />
     <MESSAGE value="added INVALID transaction type" />
     <MESSAGE value="removed unnecessary JDBC driver registration" />
     <MESSAGE value="implemented DBUpdater" />
@@ -603,7 +602,10 @@
     <MESSAGE value="fixed choosing database to connect in DBConnection" />
     <MESSAGE value="added DBUpdater unit tests" />
     <MESSAGE value="fixed DBUpdater deleting all records on update" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed DBUpdater deleting all records on update" />
+    <MESSAGE value="fixed history out of bounds bug" />
+    <MESSAGE value="fixed null balance on account registration" />
+    <MESSAGE value="simplified user history command" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplified user history command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

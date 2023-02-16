@@ -18,13 +18,13 @@ public class User {
         Scanner scanner = new Scanner(System.in);
         String command = scanner.nextLine();
         while (!command.equals("end")) {
-            selectOperation(command);
+            executeOperation(command);
+            updateInDB();
             command = scanner.nextLine();
         }
-        updateInDB();
     }
 
-    private void selectOperation(String command) {
+    private void executeOperation(String command) {
         String operation = getOperation(command);
         String[] parameters = getParameters(command);
 
@@ -64,6 +64,10 @@ public class User {
 
     private void printTransactionHistory(String[] parameters) {
         printUsername();
+        if (!isInteger(parameters[0])) {
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            return;
+        }
         int numberOfTransactions = Integer.parseInt(parameters[0]);
         transactionHistory.print(numberOfTransactions);
     }
@@ -79,12 +83,20 @@ public class User {
 
     private void buyStock(String[] parameters) {
         String companyCode = parameters[0];
+        if (!isInteger(parameters[1])) {
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            return;
+        }
         int units = Integer.parseInt(parameters[1]);
         (new PortfolioManager(portfolio, transactionHistory)).buyStock(companyCode, units);
     }
 
     private void sellStock(String[] parameters) {
         String companyCode = parameters[0];
+        if (!isInteger(parameters[1])) {
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            return;
+        }
         int units = Integer.parseInt(parameters[1]);
         (new PortfolioManager(portfolio, transactionHistory)).sellStock(companyCode, units);
     }
@@ -92,5 +104,15 @@ public class User {
     private void updateInDB() {
         portfolio.updateInDB(username);
         transactionHistory.updateInDB(username);
+    }
+
+    private boolean isInteger(String parameter) {
+        boolean isInteger = false;
+        try {
+            Integer.parseInt(parameter);
+            isInteger = true;
+        } catch (NumberFormatException ignored) {
+        }
+        return isInteger;
     }
 }
