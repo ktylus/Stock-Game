@@ -119,7 +119,7 @@ public class User {
         return isInteger;
     }
 
-    public void printAvailableCommands() {
+    private void printAvailableCommands() {
         System.out.println("Available commands: ");
         System.out.println("\"balance\" - Displays your balance.");
         System.out.println("\"portfolio\" - Displays content of your portfolio.");

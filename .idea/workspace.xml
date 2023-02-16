@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added static code analysis report (CodeMR IntelliJ plugin)">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="stopped tracking codemr folder (static analysis)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,14 +196,7 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="14535000" />
-    </task>
-    <task id="LOCAL-00014" summary="added missing printing functionality">
-      <created>1676196008420</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1676196008420</updated>
+      <workItem from="1676535528214" duration="15831000" />
     </task>
     <task id="LOCAL-00015" summary="added simple Client class for testing">
       <created>1676196022117</created>
@@ -541,14 +534,20 @@
       <option name="project" value="LOCAL" />
       <updated>1676556561108</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="stopped tracking codemr folder (static analysis)">
+      <created>1676557604992</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1676557604992</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored DAOs" />
     <MESSAGE value="refactored StockInPortfolio into a record (unnecessary accesors removed)" />
     <MESSAGE value="added getPasswordSalt" />
     <MESSAGE value="made DAOs not being singletons" />
@@ -573,7 +572,8 @@
     <MESSAGE value="improved exception handling in register method" />
     <MESSAGE value="big refactor" />
     <MESSAGE value="added static code analysis report (CodeMR IntelliJ plugin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added static code analysis report (CodeMR IntelliJ plugin)" />
+    <MESSAGE value="stopped tracking codemr folder (static analysis)" />
+    <option name="LAST_COMMIT_MESSAGE" value="stopped tracking codemr folder (static analysis)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
