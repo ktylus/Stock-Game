@@ -27,7 +27,7 @@ public class PortfolioManager {
                 System.out.println("You can't afford " + units + " units of " + code + '.');
             }
         } catch (StockAPIException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 
@@ -78,7 +78,7 @@ public class PortfolioManager {
             BigDecimal balanceAfterTransaction = portfolio.getBalance().add(calculateTotalValue(unitPrice, units));
             portfolio.setBalance(balanceAfterTransaction);
         } catch (StockAPIException | PortfolioException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 }

@@ -15,7 +15,7 @@ public class FinnhubConnection implements StockAPIConnection {
     public BigDecimal getStockPriceByCompanyCode(String companyCode) throws StockAPIException {
         HttpResponse<String> response = sendRequestAndReturnResponse(constructRequest(companyCode));
         if (response.statusCode() != HTTP_OK_STATUS_CODE) {
-            throw new StockAPIException("Could not reach stock prices provider");
+            throw new StockAPIException("HTTP error. Status code: " + response.statusCode());
         }
         BigDecimal stockPrice = findLatestClosePrice(response.body());
         if (stockPrice.doubleValue() == 0) {

@@ -22,8 +22,8 @@ public class DAOPassword {
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            boolean hasItems = result.next();
-            if (hasItems) {
+            boolean foundPassword = result.next();
+            if (foundPassword) {
                 password = result.getString("hashed_password");
             }
         } catch (SQLException e) {
@@ -39,8 +39,8 @@ public class DAOPassword {
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            boolean hasItems = result.next();
-            if (hasItems) {
+            boolean foundPasswordSalt = result.next();
+            if (foundPasswordSalt) {
                 salt = result.getString("salt");
             }
         } catch (SQLException e) {

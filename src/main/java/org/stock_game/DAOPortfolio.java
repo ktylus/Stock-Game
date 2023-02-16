@@ -43,8 +43,8 @@ public class DAOPortfolio {
                 "WHERE username LIKE '" + username + "'";
         try {
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
-            boolean hasItems = result.next();
-            if (hasItems) {
+            boolean foundBalance = result.next();
+            if (foundBalance) {
                 balance = new BigDecimal(result.getString("balance"));
             }
         } catch (SQLException e) {

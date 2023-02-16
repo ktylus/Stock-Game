@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added readme">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="improved exception handling in register method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DBUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/SecurityUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/SecurityUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInformationPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockInformationPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/TransactionType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,21 +230,7 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="9575000" />
-    </task>
-    <task id="LOCAL-00010" summary="small refactor">
-      <created>1676050492281</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1676050492281</updated>
-    </task>
-    <task id="LOCAL-00011" summary="implemented buying and selling stocks, fixed tests">
-      <created>1676056770825</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1676056770825</updated>
+      <workItem from="1676535528214" duration="12415000" />
     </task>
     <task id="LOCAL-00012" summary="implemented User">
       <created>1676195926857</created>
@@ -561,15 +561,27 @@
       <option name="project" value="LOCAL" />
       <updated>1676551392765</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="changed method name">
+      <created>1676552917954</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1676552917954</updated>
+    </task>
+    <task id="LOCAL-00060" summary="improved exception handling in register method">
+      <created>1676552946514</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1676552946514</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed &quot;stock&quot; to &quot;companyCode&quot; in Transaction to follow convention" />
-    <MESSAGE value="added the final version of the client" />
     <MESSAGE value="added account registering and removed temporal dependency" />
     <MESSAGE value="added DAOTransactionHistory" />
     <MESSAGE value="refactored DAOs" />
@@ -593,7 +605,9 @@
     <MESSAGE value="improved console messages" />
     <MESSAGE value="added &quot;help&quot; command to see available commands" />
     <MESSAGE value="added readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readme" />
+    <MESSAGE value="changed method name" />
+    <MESSAGE value="improved exception handling in register method" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved exception handling in register method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

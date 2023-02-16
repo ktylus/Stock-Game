@@ -26,12 +26,7 @@ public class DAOTransactionHistory {
             transactionHistory = new TransactionHistory();
             ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
             while (result.next()) {
-                String company_code = result.getString("company_code");
-                int units = result.getInt("units");
-                BigDecimal unitPrice = new BigDecimal(result.getString("unit_price"));
-                TransactionType transactionType = getTransactionTypeFromString(result.getString("type"));
-                LocalDate date = getDateFromDBDateString(result.getString("date"));
-                Transaction transaction = new Transaction(company_code, units, unitPrice, transactionType, date);
+                Transaction transaction = createTransactionFromDBData(result);
                 transactionHistory.addTransaction(transaction);
             }
         } catch (SQLException e) {
@@ -40,11 +35,20 @@ public class DAOTransactionHistory {
         return transactionHistory;
     }
 
-    private TransactionType getTransactionTypeFromString(String typeString) {
+    private Transaction createTransactionFromDBData(ResultSet result) throws SQLException {
+        String company_code = result.getString("company_code");
+        int units = result.getInt("units");
+        BigDecimal unitPrice = new BigDecimal(result.getString("unit_price"));
+        TransactionType transactionType = getTransactionTypeFromString(result.getString("type"));
+        LocalDate date = getDateFromDBDateString(result.getString("date"));
+        return new Transaction(company_code, units, unitPrice, transactionType, date);
+    }
+
+    private TransactionType getTransactionTypeFromString(String typeString) throws SQLException {
         return switch (typeString) {
             case "PURCHASE" -> TransactionType.PURCHASE;
             case "SALE" -> TransactionType.SALE;
-            default -> TransactionType.INVALID;
+            default -> throw new SQLException("Invalid transaction type in database.");
         };
     }
 

@@ -15,6 +15,7 @@ public class PortfolioPrinter {
     }
 
     public void printPortfolio() {
+        System.out.println("Portfolio content: ");
         printAllStocks();
         printBalance();
         printTotalAssetsValue();
@@ -22,9 +23,8 @@ public class PortfolioPrinter {
 
     private void printAllStocks() {
         stockPrices = getAllStockPrices();
-        System.out.println("Portfolio content: ");
         for (StockInPortfolio stock : portfolio.getAllStocks()) {
-            displayStock(stock);
+            printStock(stock);
         }
     }
 
@@ -36,7 +36,7 @@ public class PortfolioPrinter {
         return stockPrices;
     }
 
-    private void displayStock(StockInPortfolio stock) {
+    private void printStock(StockInPortfolio stock) {
         BigDecimal stockPrice = getStockPrice(stock);
         System.out.println(stock.companyCode() + "  |  " + stock.units() + "  |  " + stockPrice + '$');
     }

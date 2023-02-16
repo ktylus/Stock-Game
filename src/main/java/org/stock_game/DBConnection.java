@@ -5,24 +5,16 @@ import java.sql.*;
 public class DBConnection {
 
     private Connection connection;
+    private final String database;
     private static DBConnection instance = null;
-    private String database;
     private static final String DEFAULT_DATABASE = "stock_game";
 
-    private DBConnection() {
-        initialize(DEFAULT_DATABASE);
-    }
-
     private DBConnection(String database) {
-        initialize(database);
-    }
-
-    private void initialize(String database) {
         this.database = database;
-        connection = null;
         String jdbcConnectionString = "jdbc:postgresql://localhost:5432/" + database;
         String user = "postgres";
         String password = "root";
+        connection = null;
         try {
             connection = DriverManager.getConnection(jdbcConnectionString, user, password);
         } catch (SQLException e) {
@@ -31,16 +23,13 @@ public class DBConnection {
         }
     }
 
+    public static DBConnection getInstance() {
+        return getInstance(DEFAULT_DATABASE);
+    }
+
     public static DBConnection getInstance(String database) {
         if (instance == null || !instance.database.equals(database)) {
             instance = new DBConnection(database);
-        }
-        return instance;
-    }
-
-    public static DBConnection getInstance() {
-        if (instance == null) {
-            instance = new DBConnection();
         }
         return instance;
     }

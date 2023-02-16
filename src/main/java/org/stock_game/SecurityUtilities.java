@@ -8,20 +8,25 @@ import java.util.HexFormat;
 public class SecurityUtilities {
 
     public static String getHashedPassword(String password, String salt) {
-        String securePassword = null;
+        String hashedPassword = null;
         try {
             String saltedPassword = password + salt;
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-            byte[] securePasswordBytes = messageDigest.digest(saltedPassword.getBytes());
-            StringBuilder stringBuilder = new StringBuilder();
-            for (byte passwordByte : securePasswordBytes) {
-                stringBuilder.append(Integer.toString((passwordByte & 0xff) + 0x100, 16).substring(1));
-            }
-            securePassword = stringBuilder.toString();
+            hashedPassword = hashAndReturnSaltedPassword(saltedPassword);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        return securePassword;
+        return hashedPassword;
+    }
+
+    private static String hashAndReturnSaltedPassword(String saltedPassword) throws NoSuchAlgorithmException {
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        byte[] securePasswordBytes = messageDigest.digest(saltedPassword.getBytes());
+        StringBuilder hashedPasswordBuilder = new StringBuilder();
+        for (byte passwordByte : securePasswordBytes) {
+            hashedPasswordBuilder.append(Integer.toString((passwordByte & 0xff) + 0x100, 16)
+                    .substring(1));
+        }
+        return hashedPasswordBuilder.toString();
     }
 
     public static String getSalt() {

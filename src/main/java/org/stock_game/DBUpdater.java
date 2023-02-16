@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class DBUpdater {
 
     private final DBConnection dbConnection;
-    private String username;
+    private final String username;
 
     DBUpdater(String username) {
         dbConnection = DBConnection.getInstance();
@@ -34,8 +34,10 @@ public class DBUpdater {
         String unitPrice = transaction.unitPrice().toString();
         String type = transaction.type().toString();
         String date = transaction.date().toString();
-        String sqlQuery = "INSERT INTO public.\"Transactions\" (username, company_code, units, unit_price, type, date) " +
-                "VALUES ('" + username + "', '" + companyCode + "', " + units + ", '" + unitPrice + "', '" + type + "', '" + date + "')";
+        String sqlQuery = "INSERT INTO public.\"Transactions\" " +
+                "(username, company_code, units, unit_price, type, date) " +
+                "VALUES ('" + username + "', '" + companyCode + "', " + units + ", '" +
+                unitPrice + "', '" + type + "', '" + date + "')";
         dbConnection.executeDMLQuery(sqlQuery);
     }
 

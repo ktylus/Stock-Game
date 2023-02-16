@@ -10,7 +10,7 @@ public class StockInformationPrinter {
             BigDecimal stockPrice = apiConnection.getStockPriceByCompanyCode(code);
             System.out.println("Price of " + code + " is: " + stockPrice + "$.");
         } catch (StockAPIException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 }

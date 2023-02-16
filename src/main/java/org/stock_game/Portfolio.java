@@ -45,6 +45,25 @@ public class Portfolio {
         }
     }
 
+    private boolean containsStockWithCode(String code) {
+        return getStockByCode(code).units() != 0;
+    }
+
+    private void addUnitsToExistingStock(String code, int units) {
+        int unitsBeforeChange = getStockByCode(code).units();
+        try {
+            removeStock(code, unitsBeforeChange);
+        } catch (PortfolioException e) {
+            System.err.println(e.getMessage());
+        }
+        addNewStock(code, unitsBeforeChange + units);
+    }
+
+    private void addNewStock(String code, int units) {
+        StockInPortfolio newStock = new StockInPortfolio(code, units);
+        stocks.add(newStock);
+    }
+
     public void removeStock(String code, int unitsRemoved) throws PortfolioException {
         if (unitsRemoved == 0) {
             return;
@@ -63,31 +82,12 @@ public class Portfolio {
         }
     }
 
-    private boolean containsStockWithCode(String code) {
-        return getStockByCode(code).units() != 0;
-    }
-
-    private void addNewStock(String code, int units) {
-        StockInPortfolio newStock = new StockInPortfolio(code, units);
-        stocks.add(newStock);
-    }
-
-    private void addUnitsToExistingStock(String code, int units) {
-        int unitsBeforeChange = getStockByCode(code).units();
-        try {
-            removeStock(code, unitsBeforeChange);
-        } catch (PortfolioException e) {
-            e.printStackTrace();
-        }
-        addNewStock(code, unitsBeforeChange + units);
-    }
-
-    public void display() {
+    public void print() {
         PortfolioPrinter printer = new PortfolioPrinter(this);
         printer.printPortfolio();
     }
 
-    public void displayBalance() {
+    public void printBalance() {
         PortfolioPrinter printer = new PortfolioPrinter(this);
         printer.printBalance();
     }

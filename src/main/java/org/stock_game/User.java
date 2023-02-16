@@ -57,18 +57,18 @@ public class User {
 
     private void printBalance() {
         printUsername();
-        portfolio.displayBalance();
+        portfolio.printBalance();
     }
 
     private void printPortfolio() {
         printUsername();
-        portfolio.display();
+        portfolio.print();
     }
 
     private void printTransactionHistory(String[] parameters) {
         printUsername();
         if (!isInteger(parameters[0])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
+            System.out.println("Invalid parameter format - " + parameters[0] + " is not a number.");
             return;
         }
         int numberOfTransactions = Integer.parseInt(parameters[0]);
