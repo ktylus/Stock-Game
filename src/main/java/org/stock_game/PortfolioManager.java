@@ -24,7 +24,7 @@ public class PortfolioManager {
                 buyStockWhenCanAfford(code, units, stockPrice);
             }
             else {
-                System.out.println("You can't afford " + units + " units of " + code);
+                System.out.println("You can't afford " + units + " units of " + code + '.');
             }
         } catch (StockAPIException e) {
             System.out.println(e.getMessage());
@@ -64,7 +64,7 @@ public class PortfolioManager {
             sellValidAmountOfStock(code, units);
         }
         else {
-            System.out.println("You don't have " + units + " units of " + code);
+            System.out.println("You don't have " + units + " units of " + code + '.');
         }
     }
 

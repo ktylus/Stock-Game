@@ -16,12 +16,13 @@ public class User {
 
     public void play() {
         Scanner scanner = new Scanner(System.in);
-        String command = scanner.nextLine();
-        while (!command.equals("end")) {
+        String command;
+        do {
+            System.out.println("Enter command:");
+            command = scanner.nextLine();
             executeOperation(command);
             updateInDB();
-            command = scanner.nextLine();
-        }
+        } while (!command.equals("end"));
     }
 
     private void executeOperation(String command) {
@@ -35,7 +36,7 @@ public class User {
             case "price" -> printStockPrice(parameters);
             case "buy" -> buyStock(parameters);
             case "sell" -> sellStock(parameters);
-            default -> System.out.println("Invalid operation");
+            default -> System.out.println("Invalid operation.");
         }
     }
 
@@ -65,7 +66,7 @@ public class User {
     private void printTransactionHistory(String[] parameters) {
         printUsername();
         if (!isInteger(parameters[0])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
             return;
         }
         int numberOfTransactions = Integer.parseInt(parameters[0]);
@@ -84,7 +85,7 @@ public class User {
     private void buyStock(String[] parameters) {
         String companyCode = parameters[0];
         if (!isInteger(parameters[1])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
             return;
         }
         int units = Integer.parseInt(parameters[1]);
@@ -94,7 +95,7 @@ public class User {
     private void sellStock(String[] parameters) {
         String companyCode = parameters[0];
         if (!isInteger(parameters[1])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number");
+            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
             return;
         }
         int units = Integer.parseInt(parameters[1]);

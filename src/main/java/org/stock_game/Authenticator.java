@@ -16,10 +16,10 @@ public class Authenticator {
         Scanner scanner = new Scanner(System.in);
         String password = scanner.nextLine();
         while (!isPasswordCorrect(password)) {
-            System.out.println("Incorrect password");
+            System.out.println("Incorrect password.");
             password = scanner.nextLine();
         }
-        System.out.println("Logged in successfully");
+        System.out.println("Logged in successfully.");
         User user = getUserFromDB();
         user.play();
     }
@@ -41,10 +41,10 @@ public class Authenticator {
         try {
             (new DBUpdater(username)).registerAccount(securePassword, passwordSalt);
         } catch (SQLException e) {
-            System.out.println("Encountered an error while trying to register the account");
+            System.out.println("Encountered an error while trying to register the account.");
             e.printStackTrace();
         }
-        System.out.println("Account registered successfully");
+        System.out.println("Account registered successfully.");
     }
 
     private User getUserFromDB() {
