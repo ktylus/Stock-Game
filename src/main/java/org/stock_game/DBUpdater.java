@@ -76,5 +76,6 @@ public class DBUpdater {
         String sqlQuery = "INSERT INTO public.\"Users\" " +
                 "VALUES ('" + username + "', '" + hashedPassword + "', '" + passwordSalt + "')";
         dbConnection.executeDMLQuery(sqlQuery);
+        updatePortfolio(new Portfolio());
     }
 }
