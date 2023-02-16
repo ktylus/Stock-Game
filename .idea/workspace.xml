@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="improved console messages">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="added readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,21 +216,7 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="8442000" />
-    </task>
-    <task id="LOCAL-00008" summary="added PortfolioManager tests">
-      <created>1676050411854</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676050411854</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added additional TransactionHistory functionality">
-      <created>1676050443141</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1676050443141</updated>
+      <workItem from="1676535528214" duration="9575000" />
     </task>
     <task id="LOCAL-00010" summary="small refactor">
       <created>1676050492281</created>
@@ -563,15 +547,27 @@
       <option name="project" value="LOCAL" />
       <updated>1676549848745</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="added &quot;help&quot; command to see available commands">
+      <created>1676551151035</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1676551151035</updated>
+    </task>
+    <task id="LOCAL-00058" summary="added readme">
+      <created>1676551392765</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1676551392765</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added utility functions to get secure passwords" />
-    <MESSAGE value="added possibility to execute DML queries" />
     <MESSAGE value="changed &quot;stock&quot; to &quot;companyCode&quot; in Transaction to follow convention" />
     <MESSAGE value="added the final version of the client" />
     <MESSAGE value="added account registering and removed temporal dependency" />
@@ -595,7 +591,9 @@
     <MESSAGE value="added better exception handling" />
     <MESSAGE value="price in Transaction now correctly displays the dollar sign" />
     <MESSAGE value="improved console messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved console messages" />
+    <MESSAGE value="added &quot;help&quot; command to see available commands" />
+    <MESSAGE value="added readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

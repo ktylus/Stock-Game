@@ -27,7 +27,7 @@ public class Authenticator {
     private boolean isPasswordCorrect(String password) {
         String passwordInDB = (new DAOPassword()).getPassword(username);
         String passwordSalt = (new DAOPassword()).getPasswordSalt(username);
-        String expectedPassword = SecurityUtilities.getSecurePassword(password, passwordSalt);
+        String expectedPassword = SecurityUtilities.getHashedPassword(password, passwordSalt);
         return passwordInDB.equals(expectedPassword);
     }
 
@@ -35,16 +35,15 @@ public class Authenticator {
         System.out.println("Enter password:");
         Scanner scanner = new Scanner(System.in);
         String password = scanner.nextLine();
-
         String passwordSalt = SecurityUtilities.getSalt();
-        String securePassword = SecurityUtilities.getSecurePassword(password, passwordSalt);
+        String hashedPassword = SecurityUtilities.getHashedPassword(password, passwordSalt);
         try {
-            (new DBUpdater(username)).registerAccount(securePassword, passwordSalt);
+            (new DBUpdater(username)).registerAccount(hashedPassword, passwordSalt);
+            System.out.println("Account registered successfully.");
         } catch (SQLException e) {
-            System.out.println("Encountered an error while trying to register the account.");
-            e.printStackTrace();
+            System.out.println("Encountered an error while trying to register the account:");
+            System.out.println(e.getMessage());
         }
-        System.out.println("Account registered successfully.");
     }
 
     private User getUserFromDB() {
