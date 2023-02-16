@@ -31,7 +31,7 @@ public class User {
         switch (operation) {
             case "balance" -> printBalance();
             case "portfolio" -> printPortfolio();
-            case "transactionHistory" -> printTransactionHistory(parameters);
+            case "history" -> printTransactionHistory(parameters);
             case "price" -> printStockPrice(parameters);
             case "buy" -> buyStock(parameters);
             case "sell" -> sellStock(parameters);
