@@ -20,3 +20,6 @@ Use your skills to achieve the biggest profit.
 - Finnhub API (stock prices)
 - PostgreSQL database
 - CodeMR (static code analysis)
+
+To check static code analysis report, go to:
+codemr/stock_game_project/html/main_report/index.html
