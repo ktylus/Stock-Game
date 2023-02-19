@@ -12,11 +12,11 @@ public class Portfolio {
 
     private final List<StockInPortfolio> stocks;
     private BigDecimal balance;
-    private static final String STARTING_BALANCE = "1000.00";
+    private static final BigDecimal STARTING_BALANCE = new BigDecimal("1000.00");
 
     public Portfolio() {
         stocks = new ArrayList<>();
-        balance = new BigDecimal(STARTING_BALANCE);
+        balance = STARTING_BALANCE;
     }
 
     public StockInPortfolio getStockByCode(String companyCode) {
