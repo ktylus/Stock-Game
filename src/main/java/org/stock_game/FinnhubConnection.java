@@ -22,7 +22,7 @@ public class FinnhubConnection implements StockAPIConnection {
         }
         BigDecimal stockPrice = findLatestClosePrice(response.body());
         if (stockPrice.doubleValue() == 0) {
-            throw new StockAPIException("Invalid company code");
+            throw new StockAPIException("Invalid company code.");
         }
         return stockPrice;
     }
@@ -39,7 +39,7 @@ public class FinnhubConnection implements StockAPIConnection {
                     .build();
             return client.send(httpRequest, BodyHandlers.ofString());
         } catch (InterruptedException | URISyntaxException | IOException e) {
-            throw new StockAPIException("Internal error");
+            throw new StockAPIException("Internal error.");
         }
     }
 
