@@ -21,6 +21,7 @@ public class PortfolioManager {
 
     public void buyStock(String companyCode, int units) {
         if (units <= 0) {
+            System.err.println("Can't buy " + units + " of stock.");
             return;
         }
 
@@ -63,6 +64,7 @@ public class PortfolioManager {
 
     public void sellStock(String companyCode, int units) {
         if (units <= 0) {
+            System.err.println("Can't sell " + units + " of stock.");
             return;
         }
 
