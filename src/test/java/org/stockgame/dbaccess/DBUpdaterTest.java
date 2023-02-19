@@ -41,7 +41,7 @@ class DBUpdaterTest {
 
         Transaction firstTransaction = historyInDB.getTransactionHistory().get(0);
         Transaction secondTransaction = historyInDB.getTransactionHistory().get(1);
-        assertEquals(2, historyInDB.getAmountOfTransactions());
+        assertEquals(2, historyInDB.getNumberOfTransactions());
         Transaction expectedFirstTransaction = new Transaction("AAPL", 5,
                 new BigDecimal("100.00"), TransactionType.PURCHASE,
                 LocalDate.of(2023, 2, 15));

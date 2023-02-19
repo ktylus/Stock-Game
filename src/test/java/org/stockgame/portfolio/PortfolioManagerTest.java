@@ -30,7 +30,7 @@ class PortfolioManagerTest {
     }
 
     boolean checkIfPortfolioAndHistoryUnchanged() {
-        return transactionHistory.getAmountOfTransactions() == 0 &&
+        return transactionHistory.getNumberOfTransactions() == 0 &&
                 portfolio.getAllStocks().size() == 2 &&
                 portfolio.getBalance().equals(startingBalance) &&
                 portfolio.getAllStocks().get(0).companyCode().equals("IBM") &&
@@ -68,7 +68,7 @@ class PortfolioManagerTest {
         BigDecimal expectedBalance = startingBalance.subtract(IBMStockPrice.multiply(new BigDecimal(unitsToBuy)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(2, portfolio.getAllStocks().size());
-        assertEquals(1, transactionHistory.getAmountOfTransactions());
+        assertEquals(1, transactionHistory.getNumberOfTransactions());
     }
 
     @Test
@@ -80,7 +80,7 @@ class PortfolioManagerTest {
         BigDecimal expectedBalance = startingBalance.subtract(AAPLStockPrice.multiply(new BigDecimal(unitsToBuy)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(3, portfolio.getAllStocks().size());
-        assertEquals(1, transactionHistory.getAmountOfTransactions());
+        assertEquals(1, transactionHistory.getNumberOfTransactions());
     }
 
     @Test
@@ -102,7 +102,7 @@ class PortfolioManagerTest {
         BigDecimal expectedBalance = startingBalance.add(IBMStockPrice.multiply(new BigDecimal(2)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(2, portfolio.getAllStocks().size());
-        assertEquals(1, transactionHistory.getAmountOfTransactions());
+        assertEquals(1, transactionHistory.getNumberOfTransactions());
     }
 
     @Test
@@ -112,6 +112,6 @@ class PortfolioManagerTest {
         BigDecimal expectedBalance = startingBalance.add(TSLAStockPrice.multiply(new BigDecimal(10)));
         assertEquals(expectedBalance, portfolio.getBalance());
         assertEquals(1, portfolio.getAllStocks().size());
-        assertEquals(1, transactionHistory.getAmountOfTransactions());
+        assertEquals(1, transactionHistory.getNumberOfTransactions());
     }
 }

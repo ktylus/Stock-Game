@@ -31,7 +31,7 @@ public class TransactionHistory {
         return Collections.unmodifiableList(transactionHistory);
     }
 
-    public int getAmountOfTransactions() {
+    public int getNumberOfTransactions() {
         return transactionHistory.size();
     }
 

@@ -1,9 +1,7 @@
 package org.stockgame.dbaccess;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.stockgame.utilities.TestUtilities;
 import org.stockgame.transaction.Transaction;
 import org.stockgame.transaction.TransactionHistory;
 import org.stockgame.transaction.TransactionType;
@@ -31,7 +29,7 @@ class DAOTransactionHistoryTest {
         TransactionHistory history = daoTransactionHistory.getTransactionHistory(TEST_USER);
         Transaction firstTransaction = history.getTransactionHistory().get(0);
         Transaction secondTransaction = history.getTransactionHistory().get(1);
-        assertEquals(2, history.getAmountOfTransactions());
+        assertEquals(2, history.getNumberOfTransactions());
         Transaction expectedFirstTransaction = new Transaction("IBM", 5,
                 new BigDecimal("100.00"), TransactionType.PURCHASE,
                 LocalDate.of(2023, 2, 15));
@@ -45,6 +43,6 @@ class DAOTransactionHistoryTest {
     @Test
     void getTransactionHistoryOfNonexistentUser() {
         TransactionHistory history = daoTransactionHistory.getTransactionHistory(NONEXISTENT_USER);
-        assertEquals(0, history.getAmountOfTransactions());
+        assertEquals(0, history.getNumberOfTransactions());
     }
 }
