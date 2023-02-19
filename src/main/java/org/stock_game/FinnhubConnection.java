@@ -1,15 +1,18 @@
 package org.stock_game;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
 
 public class FinnhubConnection implements StockAPIConnection {
 
-    private final String API_KEY = "cficf51r01qq9nt20fjgcficf51r01qq9nt20fk0";
-    private final int HTTP_OK_STATUS_CODE = 200;
+    private static final String API_KEY = "cficf51r01qq9nt20fjgcficf51r01qq9nt20fk0";
+    private static final int HTTP_OK_STATUS_CODE = 200;
 
     @Override
     public BigDecimal getStockPriceByCompanyCode(String companyCode) throws StockAPIException {
@@ -34,8 +37,8 @@ public class FinnhubConnection implements StockAPIConnection {
             HttpRequest httpRequest = HttpRequest.newBuilder()
                     .uri(new URI(request))
                     .build();
-            return client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        } catch (Exception e) {
+            return client.send(httpRequest, BodyHandlers.ofString());
+        } catch (InterruptedException | URISyntaxException | IOException e) {
             throw new StockAPIException("Internal error");
         }
     }

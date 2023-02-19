@@ -36,12 +36,12 @@ public class DAOTransactionHistory {
     }
 
     private Transaction createTransactionFromDBData(ResultSet result) throws SQLException {
-        String company_code = result.getString("company_code");
+        String companyCode = result.getString("company_code");
         int units = result.getInt("units");
         BigDecimal unitPrice = new BigDecimal(result.getString("unit_price"));
         TransactionType transactionType = getTransactionTypeFromString(result.getString("type"));
         LocalDate date = getDateFromDBDateString(result.getString("date"));
-        return new Transaction(company_code, units, unitPrice, transactionType, date);
+        return new Transaction(companyCode, units, unitPrice, transactionType, date);
     }
 
     private TransactionType getTransactionTypeFromString(String typeString) throws SQLException {

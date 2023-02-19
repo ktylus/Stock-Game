@@ -20,8 +20,7 @@ public class DAOPassword {
         String sqlQuery = "SELECT hashed_password " +
                 "FROM public.\"Users\" " +
                 "WHERE username LIKE '" + username + "'";
-        try {
-            ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
+        try (ResultSet result = dbConnection.executeSelectQuery(sqlQuery)) {
             boolean foundPassword = result.next();
             if (foundPassword) {
                 password = result.getString("hashed_password");
@@ -37,8 +36,7 @@ public class DAOPassword {
         String sqlQuery = "SELECT salt " +
                 "FROM public.\"Users\" " +
                 "WHERE username LIKE '" + username + "'";
-        try {
-            ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
+        try (ResultSet result = dbConnection.executeSelectQuery(sqlQuery)) {
             boolean foundPasswordSalt = result.next();
             if (foundPasswordSalt) {
                 salt = result.getString("salt");

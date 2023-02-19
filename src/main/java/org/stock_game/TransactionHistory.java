@@ -1,6 +1,7 @@
 package org.stock_game;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TransactionHistory {
@@ -25,7 +26,7 @@ public class TransactionHistory {
     }
 
     public List<Transaction> getTransactionHistory() {
-        return transactionHistory;
+        return Collections.unmodifiableList(transactionHistory);
     }
 
     public int getAmountOfTransactions() {

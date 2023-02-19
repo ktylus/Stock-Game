@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="stopped tracking codemr folder (static analysis)">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="made method in User private">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DAOTransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/FinnhubConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/SecurityUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/SecurityUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/StockAPIConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,26 +76,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Kamil/Desktop/stock game/stock_game_project/lib/postgresql-42.5.2.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.codemr.intellij.ApplicationSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kamil/Desktop/Proggen_Inspections_wo_javadoc.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kamil\Desktop\stock game\stock_game_project\src\main\java\org\example" />
@@ -104,7 +115,7 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.stock_game.Client" />
       <module name="stock_game_project.main" />
@@ -196,14 +207,9 @@
       <workItem from="1676363093685" duration="7599000" />
       <workItem from="1676374527389" duration="4679000" />
       <workItem from="1676446509899" duration="15200000" />
-      <workItem from="1676535528214" duration="15831000" />
-    </task>
-    <task id="LOCAL-00015" summary="added simple Client class for testing">
-      <created>1676196022117</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1676196022117</updated>
+      <workItem from="1676535528214" duration="16231000" />
+      <workItem from="1676754605476" duration="2079000" />
+      <workItem from="1676805407952" duration="986000" />
     </task>
     <task id="LOCAL-00016" summary="small details">
       <created>1676197247354</created>
@@ -541,14 +547,20 @@
       <option name="project" value="LOCAL" />
       <updated>1676557604992</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="made method in User private">
+      <created>1676571823442</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1676571823442</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored StockInPortfolio into a record (unnecessary accesors removed)" />
     <MESSAGE value="added getPasswordSalt" />
     <MESSAGE value="made DAOs not being singletons" />
     <MESSAGE value="changed password correctness check after including salt" />
@@ -573,7 +585,8 @@
     <MESSAGE value="big refactor" />
     <MESSAGE value="added static code analysis report (CodeMR IntelliJ plugin)" />
     <MESSAGE value="stopped tracking codemr folder (static analysis)" />
-    <option name="LAST_COMMIT_MESSAGE" value="stopped tracking codemr folder (static analysis)" />
+    <MESSAGE value="made method in User private" />
+    <option name="LAST_COMMIT_MESSAGE" value="made method in User private" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

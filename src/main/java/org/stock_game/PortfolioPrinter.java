@@ -7,7 +7,7 @@ import java.util.Map;
 public class PortfolioPrinter {
 
     private final Portfolio portfolio;
-    Map<String, BigDecimal> stockPrices;
+    private Map<String, BigDecimal> stockPrices;
 
     PortfolioPrinter(Portfolio portfolio) {
         this.portfolio = portfolio;

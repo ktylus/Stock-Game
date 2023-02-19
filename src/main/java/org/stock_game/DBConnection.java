@@ -2,7 +2,7 @@ package org.stock_game;
 
 import java.sql.*;
 
-public class DBConnection {
+public final class DBConnection {
 
     private Connection connection;
     private final String database;

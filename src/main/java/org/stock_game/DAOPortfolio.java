@@ -21,8 +21,7 @@ public class DAOPortfolio {
         String sqlQuery = "SELECT company_code, units " +
                 "FROM public.\"Portfolios\" " +
                 "WHERE username LIKE '" + username + "'";
-        try {
-            ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
+        try (ResultSet result = dbConnection.executeSelectQuery(sqlQuery)) {
             portfolio = new Portfolio();
             portfolio.setBalance(getBalance(username));
             while (result.next()) {
@@ -41,8 +40,7 @@ public class DAOPortfolio {
         String sqlQuery = "SELECT balance " +
                 "FROM public.\"Balances\" " +
                 "WHERE username LIKE '" + username + "'";
-        try {
-            ResultSet result = dbConnection.executeSelectQuery(sqlQuery);
+        try (ResultSet result = dbConnection.executeSelectQuery(sqlQuery)) {
             boolean foundBalance = result.next();
             if (foundBalance) {
                 balance = new BigDecimal(result.getString("balance"));

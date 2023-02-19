@@ -2,7 +2,10 @@ package org.stock_game;
 
 import java.util.Scanner;
 
-public class Client {
+public final class Client {
+    private Client() {
+    }
+
     public static void main(String[] args) {
         logInOrRegister();
     }

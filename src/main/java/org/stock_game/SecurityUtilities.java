@@ -5,7 +5,13 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.HexFormat;
 
-public class SecurityUtilities {
+public final class SecurityUtilities {
+
+    private static final int HEX_SYSTEM_BASE = 16;
+    private static final int SALT_SIZE_IN_BYTES = 32;
+
+    private SecurityUtilities() {
+    }
 
     public static String getHashedPassword(String password, String salt) {
         String hashedPassword = null;
@@ -23,7 +29,8 @@ public class SecurityUtilities {
         byte[] securePasswordBytes = messageDigest.digest(saltedPassword.getBytes());
         StringBuilder hashedPasswordBuilder = new StringBuilder();
         for (byte passwordByte : securePasswordBytes) {
-            hashedPasswordBuilder.append(Integer.toString((passwordByte & 0xff) + 0x100, 16)
+            // conversion to hex string
+            hashedPasswordBuilder.append(Integer.toString((passwordByte & 0xff) + 0x100, HEX_SYSTEM_BASE)
                     .substring(1));
         }
         return hashedPasswordBuilder.toString();
@@ -31,7 +38,7 @@ public class SecurityUtilities {
 
     public static String getSalt() {
         SecureRandom random = new SecureRandom();
-        byte[] salt = new byte[32];
+        byte[] salt = new byte[SALT_SIZE_IN_BYTES];
         random.nextBytes(salt);
         HexFormat hf = HexFormat.of();
         return hf.formatHex(salt);

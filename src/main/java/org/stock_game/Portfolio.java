@@ -2,13 +2,14 @@ package org.stock_game;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Portfolio {
 
     private final List<StockInPortfolio> stocks;
     private BigDecimal balance;
-    private final String STARTING_BALANCE = "1000.00";
+    private static final String STARTING_BALANCE = "1000.00";
 
     Portfolio() {
         stocks = new ArrayList<>();
@@ -25,7 +26,7 @@ public class Portfolio {
     }
 
     public List<StockInPortfolio> getAllStocks() {
-        return stocks;
+        return Collections.unmodifiableList(stocks);
     }
 
     public BigDecimal getBalance() {
