@@ -2,13 +2,11 @@ package org.stock_game;
 
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class StockAPIConnectionTest {
 
-    StockAPIConnection apiConnection = new FinnhubConnection();
+    private final StockAPIConnection apiConnection = new FinnhubConnection();
 
     @Test
     void getStockPriceByCorrectCompanyCode() {
@@ -21,7 +19,7 @@ class StockAPIConnectionTest {
     void getStockPriceByIncorrectCompanyCode() {
         assertThrows(
                 StockAPIException.class,
-                () -> apiConnection.getStockPriceByCompanyCode("XXXXXXXXXXX")
+                () -> apiConnection.getStockPriceByCompanyCode(TestUtilities.INVALID_COMPANY_CODE)
         );
     }
 }

@@ -9,11 +9,13 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.stock_game.TestUtilities.TEST_DATABASE;
+
 class DBUpdaterTest {
 
     private DBUpdater dbUpdater;
-    private final String TEST_DATABASE = "test_stock_game";
-    private final String TEST_USER = "dbUpdater_test_user";
+    private static final String TEST_USER = "dbUpdater_test_user";
+    private static final String ALREADY_EXISTING_USER = "test_user";
 
     @BeforeEach
     void setUp() {
@@ -36,22 +38,12 @@ class DBUpdaterTest {
         Transaction firstTransaction = historyInDB.getTransactionHistory().get(0);
         Transaction secondTransaction = historyInDB.getTransactionHistory().get(1);
         assertEquals(2, historyInDB.getAmountOfTransactions());
-
-        assertEquals("AAPL", firstTransaction.companyCode());
-        assertEquals(5, firstTransaction.units());
-        assertEquals("100.00", firstTransaction.unitPrice().toString());
-        assertEquals("PURCHASE", firstTransaction.type().toString());
-        assertEquals(2023, firstTransaction.date().getYear());
-        assertEquals(2, firstTransaction.date().getMonthValue());
-        assertEquals(15, firstTransaction.date().getDayOfMonth());
-
-        assertEquals("AAPL", secondTransaction.companyCode());
-        assertEquals(5, secondTransaction.units());
-        assertEquals("110.00", secondTransaction.unitPrice().toString());
-        assertEquals("SALE", secondTransaction.type().toString());
-        assertEquals(2023, secondTransaction.date().getYear());
-        assertEquals(2, secondTransaction.date().getMonthValue());
-        assertEquals(16, secondTransaction.date().getDayOfMonth());
+        assertTrue(TestUtilities.isTransactionCorrect(firstTransaction, "AAPL", 5,
+                new BigDecimal("100.00"), TransactionType.PURCHASE,
+                LocalDate.of(2023, 2, 15)));
+        assertTrue(TestUtilities.isTransactionCorrect(secondTransaction, "AAPL", 5,
+                new BigDecimal("110.00"), TransactionType.SALE,
+                LocalDate.of(2023, 2, 16)));
     }
 
     @Test
@@ -86,10 +78,9 @@ class DBUpdaterTest {
 
     @Test
     void registerAlreadyExistingAccount() {
-        String alreadyExistingUser = "test_user";
         assertThrows(
                 SQLException.class,
-                () -> (new DBUpdater(alreadyExistingUser, TEST_DATABASE))
+                () -> (new DBUpdater(ALREADY_EXISTING_USER, TEST_DATABASE))
                         .registerAccount("password", "salt")
         );
     }

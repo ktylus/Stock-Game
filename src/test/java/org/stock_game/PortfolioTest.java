@@ -22,15 +22,13 @@ class PortfolioTest {
     @Test
     void getStockInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("TSLA");
-        assertEquals(10, stock.units());
-        assertEquals("TSLA", stock.companyCode());
+        assertTrue(TestUtilities.isStockInPortfolioCorrect(stock, "TSLA", 10));
     }
 
     @Test
     void getStockNotInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("ZZZ");
-        assertEquals(0, stock.units());
-        assertEquals("ZZZ", stock.companyCode());
+        assertTrue(TestUtilities.isStockInPortfolioCorrect(stock, "ZZZ", 0));
     }
 
     @Test
@@ -38,10 +36,8 @@ class PortfolioTest {
         List<StockInPortfolio> allStocks = portfolio.getAllStocks();
         StockInPortfolio firstStock = allStocks.get(0);
         StockInPortfolio secondStock = allStocks.get(1);
-        assertEquals("IBM", firstStock.companyCode());
-        assertEquals(5, firstStock.units());
-        assertEquals("TSLA", secondStock.companyCode());
-        assertEquals(10, secondStock.units());
+        assertTrue(TestUtilities.isStockInPortfolioCorrect(firstStock, "IBM", 5));
+        assertTrue(TestUtilities.isStockInPortfolioCorrect(secondStock, "TSLA", 10));
     }
 
     @Test

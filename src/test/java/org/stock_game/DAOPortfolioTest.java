@@ -5,12 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.stock_game.TestUtilities.TEST_DATABASE;
+import static org.stock_game.TestUtilities.TEST_USER;
+import static org.stock_game.TestUtilities.NONEXISTENT_USER;
+
 class DAOPortfolioTest {
 
     private DAOPortfolio daoPortfolio;
-    private final String TEST_DATABASE = "test_stock_game";
-    private final String TEST_USER = "test_user";
-    private final String NONEXISTENT_USER = "nonexistent_user";
 
     @BeforeEach
     void setUp() {
