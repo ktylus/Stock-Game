@@ -67,11 +67,12 @@ public class User {
 
     private void printTransactionHistory(String[] parameters) {
         printUsername();
-        if (!isInteger(parameters[0])) {
-            System.out.println("Invalid parameter format - " + parameters[0] + " is not a number.");
+        String numberOfTransactionsString = parameters[0];
+        if (!isInteger(numberOfTransactionsString)) {
+            System.out.println("Invalid parameter format - " + numberOfTransactionsString + " is not a number.");
             return;
         }
-        int numberOfTransactions = Integer.parseInt(parameters[0]);
+        int numberOfTransactions = Integer.parseInt(numberOfTransactionsString);
         transactionHistory.print(numberOfTransactions);
     }
 
@@ -86,21 +87,23 @@ public class User {
 
     private void buyStock(String[] parameters) {
         String companyCode = parameters[0];
-        if (!isInteger(parameters[1])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
+        String unitsString = parameters[1];
+        if (!isInteger(unitsString)) {
+            System.out.println("Invalid parameter format - " + unitsString + " is not a number.");
             return;
         }
-        int units = Integer.parseInt(parameters[1]);
+        int units = Integer.parseInt(unitsString);
         (new PortfolioManager(portfolio, transactionHistory)).buyStock(companyCode, units);
     }
 
     private void sellStock(String[] parameters) {
         String companyCode = parameters[0];
-        if (!isInteger(parameters[1])) {
-            System.out.println("Invalid parameter format - " + parameters[1] + " is not a number.");
+        String unitsString = parameters[1];
+        if (!isInteger(unitsString)) {
+            System.out.println("Invalid parameter format - " + unitsString + " is not a number.");
             return;
         }
-        int units = Integer.parseInt(parameters[1]);
+        int units = Integer.parseInt(unitsString);
         (new PortfolioManager(portfolio, transactionHistory)).sellStock(companyCode, units);
     }
 
