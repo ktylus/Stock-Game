@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="improved exception handling messages">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="overrided equals() method in 2 classes, refactored tests accordingly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInformationPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInformationPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/user/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/user/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/utilities/TestUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/utilities/TestUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/user/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +106,20 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DAOTransactionHistoryTest.getTransactionHistoryOfExistingUser">
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.stockgame.client.Client" />
+      <module name="stock_game_project.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.stockgame.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DAOTransactionHistoryTest.getTransactionHistoryOfExistingUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,16 +192,13 @@
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project/html/main_report/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project 2/html/main_report/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DAOTransactionHistoryTest.getTransactionHistoryOfExistingUser" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Gradle.Tests in 'org.stockgame'" />
+        <item itemvalue="Gradle.DAOTransactionHistoryTest.getTransactionHistoryOfExistingUser" />
         <item itemvalue="Gradle.Tests in 'org.stock_game'" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -216,14 +220,7 @@
       <workItem from="1676446509899" duration="15200000" />
       <workItem from="1676535528214" duration="16231000" />
       <workItem from="1676754605476" duration="2079000" />
-      <workItem from="1676805407952" duration="10083000" />
-    </task>
-    <task id="LOCAL-00024" summary="modified tests to fit changed exception handling">
-      <created>1676314079642</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1676314079642</updated>
+      <workItem from="1676805407952" duration="10592000" />
     </task>
     <task id="LOCAL-00025" summary="fixed JDBC connection string">
       <created>1676314100845</created>
@@ -561,14 +558,20 @@
       <option name="project" value="LOCAL" />
       <updated>1676814923234</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="overrided equals() method in 2 classes, refactored tests accordingly">
+      <created>1676826243055</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1676826243055</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed choosing database to connect in DBConnection" />
     <MESSAGE value="added DBUpdater unit tests" />
     <MESSAGE value="fixed DBUpdater deleting all records on update" />
     <MESSAGE value="fixed history out of bounds bug" />
@@ -593,7 +596,8 @@
     <MESSAGE value="changed main package name to follow convention" />
     <MESSAGE value="divided the project into packages" />
     <MESSAGE value="improved exception handling messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved exception handling messages" />
+    <MESSAGE value="overrided equals() method in 2 classes, refactored tests accordingly" />
+    <option name="LAST_COMMIT_MESSAGE" value="overrided equals() method in 2 classes, refactored tests accordingly" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

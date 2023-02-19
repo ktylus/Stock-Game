@@ -45,7 +45,7 @@ public class User {
             case "help" -> printAvailableCommands();
             case "end" -> {
             }
-            default -> System.out.println("Invalid operation.");
+            default -> System.err.println("Invalid operation.");
         }
     }
 
@@ -76,7 +76,7 @@ public class User {
         printUsername();
         String numberOfTransactionsString = parameters[0];
         if (!isInteger(numberOfTransactionsString)) {
-            System.out.println("Invalid parameter format - " + numberOfTransactionsString + " is not a number.");
+            System.err.println("Invalid parameter format - " + numberOfTransactionsString + " is not a number.");
             return;
         }
         int numberOfTransactions = Integer.parseInt(numberOfTransactionsString);
@@ -96,7 +96,7 @@ public class User {
         String companyCode = parameters[0];
         String unitsString = parameters[1];
         if (!isInteger(unitsString)) {
-            System.out.println("Invalid parameter format - " + unitsString + " is not a number.");
+            System.err.println("Invalid parameter format - " + unitsString + " is not a number.");
             return;
         }
         int units = Integer.parseInt(unitsString);
@@ -107,7 +107,7 @@ public class User {
         String companyCode = parameters[0];
         String unitsString = parameters[1];
         if (!isInteger(unitsString)) {
-            System.out.println("Invalid parameter format - " + unitsString + " is not a number.");
+            System.err.println("Invalid parameter format - " + unitsString + " is not a number.");
             return;
         }
         int units = Integer.parseInt(unitsString);
@@ -137,5 +137,6 @@ public class User {
         System.out.println("\"price <company_code>\" - Displays the price of a given stock.");
         System.out.println("\"buy <company_code> <units_of_stock>\" - Buys certain amount of stocks of a given company.");
         System.out.println("\"sell <company_code> <units_of_stock>\" - Sells certain amount of stocks of a given company.");
+        System.out.println("\"end\" - Stops the program.");
     }
 }
