@@ -38,6 +38,8 @@ public class User {
             case "buy" -> buyStock(parameters);
             case "sell" -> sellStock(parameters);
             case "help" -> printAvailableCommands();
+            case "end" -> {
+            }
             default -> System.out.println("Invalid operation.");
         }
     }

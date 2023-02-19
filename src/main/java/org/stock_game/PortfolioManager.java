@@ -22,6 +22,7 @@ public class PortfolioManager {
             BigDecimal stockPrice = getStockPrice(code);
             if (canAfford(stockPrice, units)) {
                 buyStockWhenCanAfford(code, units, stockPrice);
+                System.out.println("Bought " + units + " of " + code + '.');
             }
             else {
                 System.out.println("You can't afford " + units + " units of " + code + '.');
@@ -62,6 +63,7 @@ public class PortfolioManager {
         boolean haveEnoughUnits = units <= portfolio.getStockByCode(code).units();
         if (haveEnoughUnits) {
             sellValidAmountOfStock(code, units);
+            System.out.println("Sold " + units + " of " + code + '.');
         }
         else {
             System.out.println("You don't have " + units + " units of " + code + '.');
