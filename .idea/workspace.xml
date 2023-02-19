@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="small console message improvement" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="changed method visibility in client to private">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/TransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DBUpdaterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DBUpdaterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/portfolio/PortfolioManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/portfolio/PortfolioManagerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +110,7 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Gradle.Tests in 'stock_game_project.test'">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.stockgame.client.Client" />
       <module name="stock_game_project.main" />
@@ -186,16 +193,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project/html/main_report/index.html" useBuiltInWebServerPort="true">
+    <configuration name="Tests in 'stock_game_project.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'stock_game_project.test'" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Gradle.Tests in 'org.stockgame'" />
         <item itemvalue="Gradle.DAOTransactionHistoryTest.getTransactionHistoryOfExistingUser" />
         <item itemvalue="Gradle.Tests in 'org.stock_game'" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -217,14 +242,7 @@
       <workItem from="1676446509899" duration="15200000" />
       <workItem from="1676535528214" duration="16231000" />
       <workItem from="1676754605476" duration="2079000" />
-      <workItem from="1676805407952" duration="11118000" />
-    </task>
-    <task id="LOCAL-00027" summary="changed StockInPortfolio into a record">
-      <created>1676374370348</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1676374370348</updated>
+      <workItem from="1676805407952" duration="12157000" />
     </task>
     <task id="LOCAL-00028" summary="added STARTING_BALANCE explaining final variable">
       <created>1676374402662</created>
@@ -562,14 +580,20 @@
       <option name="project" value="LOCAL" />
       <updated>1676826873457</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="changed method visibility in client to private">
+      <created>1676827055585</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1676827055585</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed history out of bounds bug" />
     <MESSAGE value="fixed null balance on account registration" />
     <MESSAGE value="simplified user history command" />
     <MESSAGE value="added better exception handling" />
@@ -594,7 +618,8 @@
     <MESSAGE value="overrided equals() method in 2 classes, refactored tests accordingly" />
     <MESSAGE value="error display improved in User" />
     <MESSAGE value="small console message improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="small console message improvement" />
+    <MESSAGE value="changed method visibility in client to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed method visibility in client to private" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
