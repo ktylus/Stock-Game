@@ -51,7 +51,7 @@ public class PortfolioPrinter {
         try {
             stockPrice = apiConnection.getStockPriceByCompanyCode(stock.companyCode());
         } catch (StockAPIException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
         return stockPrice;
     }

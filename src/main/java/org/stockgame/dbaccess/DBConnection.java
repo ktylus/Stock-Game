@@ -19,7 +19,7 @@ public final class DBConnection {
             connection = DriverManager.getConnection(jdbcConnectionString, user, password);
         } catch (SQLException e) {
             System.err.println("Failed to establish database connection");
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 

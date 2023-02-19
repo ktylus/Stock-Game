@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="minor message style changes">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="divided the project into packages">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,42 +106,19 @@
       <recent name="org.stock_game" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'org.stock_game'">
+  <component name="RunManager" selected="Gradle.Tests in 'org.stockgame'">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.stock_game.Client" />
+      <option name="MAIN_CLASS_NAME" value="org.stockgame.client.Client" />
       <module name="stock_game_project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.stock_game.*" />
+          <option name="PATTERN" value="org.stockgame.dbaccess.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="DBUpdaterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.stock_game.DBUpdaterTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="Tests in 'org.stock_game'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -166,6 +143,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'org.stockgame'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.stockgame.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/stock_game_project/codemr/stock_game_project/html/main_report/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -174,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'org.stockgame'" />
         <item itemvalue="Gradle.Tests in 'org.stock_game'" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Gradle.DBUpdaterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -200,21 +200,7 @@
       <workItem from="1676446509899" duration="15200000" />
       <workItem from="1676535528214" duration="16231000" />
       <workItem from="1676754605476" duration="2079000" />
-      <workItem from="1676805407952" duration="4707000" />
-    </task>
-    <task id="LOCAL-00021" summary="added PostgreSQL gradle dependency">
-      <created>1676313999896</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1676313999896</updated>
-    </task>
-    <task id="LOCAL-00022" summary="fixed DAOPassword">
-      <created>1676314032241</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1676314032241</updated>
+      <workItem from="1676805407952" duration="6726000" />
     </task>
     <task id="LOCAL-00023" summary="added DAOPortfolio">
       <created>1676314046631</created>
@@ -545,15 +531,27 @@
       <option name="project" value="LOCAL" />
       <updated>1676809512004</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="changed main package name to follow convention">
+      <created>1676811473820</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1676811473820</updated>
+    </task>
+    <task id="LOCAL-00071" summary="divided the project into packages">
+      <created>1676812215703</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1676812215703</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added missing methods to TransactionHistory" />
-    <MESSAGE value="added DAO unit tests" />
     <MESSAGE value="fixed DAOPassword and DAOPortfolio" />
     <MESSAGE value="fixed choosing database to connect in DBConnection" />
     <MESSAGE value="added DBUpdater unit tests" />
@@ -577,18 +575,9 @@
     <MESSAGE value="added buy/sell messages printed to console" />
     <MESSAGE value="major unittest refactor" />
     <MESSAGE value="minor message style changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor message style changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="changed main package name to follow convention" />
+    <MESSAGE value="divided the project into packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="divided the project into packages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

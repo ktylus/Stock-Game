@@ -34,7 +34,8 @@ public class DAOTransactionHistory {
                 transactionHistory.addTransaction(transaction);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't retrieve transaction history data from database.");
+            System.err.println(e.getMessage());
         }
         return transactionHistory;
     }

@@ -26,7 +26,8 @@ public class DAOPassword {
                 password = result.getString("hashed_password");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't retrieve password data from database.");
+            System.err.println(e.getMessage());
         }
         return password;
     }
@@ -42,7 +43,8 @@ public class DAOPassword {
                 salt = result.getString("salt");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't retrieve password data from database.");
+            System.err.println(e.getMessage());
         }
         return salt;
     }

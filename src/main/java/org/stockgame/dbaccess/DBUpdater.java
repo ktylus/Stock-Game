@@ -29,7 +29,8 @@ public class DBUpdater {
                 addSingleTransactionToHistory(transaction);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't update transaction history in database");
+            System.err.println(e.getMessage());
         }
     }
 
@@ -55,7 +56,8 @@ public class DBUpdater {
             }
             updatePortfolioBalance(portfolio);
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't update portfolio in database");
+            System.err.println(e.getMessage());
         }
     }
 

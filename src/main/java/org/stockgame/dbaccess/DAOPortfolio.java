@@ -32,7 +32,8 @@ public class DAOPortfolio {
                 portfolio.addStock(companyCode, units);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't retrieve portfolio data from database.");
+            System.err.println(e.getMessage());
         }
         return portfolio;
     }
@@ -48,7 +49,8 @@ public class DAOPortfolio {
                 balance = new BigDecimal(result.getString("balance"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Couldn't retrieve balance data from database.");
+            System.err.println(e.getMessage());
         }
         return balance;
     }
