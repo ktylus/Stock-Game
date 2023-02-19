@@ -1,4 +1,4 @@
-package org.stock_game;
+package org.stockgame;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,9 +8,9 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.stock_game.TestUtilities.TEST_DATABASE;
-import static org.stock_game.TestUtilities.TEST_USER;
-import static org.stock_game.TestUtilities.NONEXISTENT_USER;
+import static org.stockgame.TestUtilities.TEST_DATABASE;
+import static org.stockgame.TestUtilities.TEST_USER;
+import static org.stockgame.TestUtilities.NONEXISTENT_USER;
 
 class DAOTransactionHistoryTest {
 

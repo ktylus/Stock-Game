@@ -1,4 +1,4 @@
-package org.stock_game;
+package org.stockgame;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

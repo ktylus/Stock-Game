@@ -1,4 +1,4 @@
-package org.stock_game;
+package org.stockgame;
 
 import java.util.ArrayList;
 import java.util.Collections;

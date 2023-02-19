@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="minor refactor">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="minor message style changes">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/TestUtilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/PortfolioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stock_game/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPortfolioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOPortfolioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOTransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DAOTransactionHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/DBUpdaterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/DBUpdaterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stock_game/PortfolioManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,28 +200,7 @@
       <workItem from="1676446509899" duration="15200000" />
       <workItem from="1676535528214" duration="16231000" />
       <workItem from="1676754605476" duration="2079000" />
-      <workItem from="1676805407952" duration="3577000" />
-    </task>
-    <task id="LOCAL-00018" summary="changed DAOUser to DAOPassword">
-      <created>1676206283478</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1676206283478</updated>
-    </task>
-    <task id="LOCAL-00019" summary="done Client and most of Authenticator">
-      <created>1676206390300</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1676206390300</updated>
-    </task>
-    <task id="LOCAL-00020" summary="changed exception handling logic in DBConnection">
-      <created>1676206416156</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1676206416156</updated>
+      <workItem from="1676805407952" duration="4707000" />
     </task>
     <task id="LOCAL-00021" summary="added PostgreSQL gradle dependency">
       <created>1676313999896</created>
@@ -553,16 +524,34 @@
       <option name="project" value="LOCAL" />
       <updated>1676806713542</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="added buy/sell messages printed to console">
+      <created>1676809418463</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1676809418463</updated>
+    </task>
+    <task id="LOCAL-00068" summary="major unittest refactor">
+      <created>1676809435130</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1676809435130</updated>
+    </task>
+    <task id="LOCAL-00069" summary="minor message style changes">
+      <created>1676809512004</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1676809512004</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed password correctness check after including salt" />
-    <MESSAGE value="added possibility to connect to other DBs in DBConnector (for test purposes)" />
-    <MESSAGE value="added possibility to connect to other DBs in DBUpdater (for test purposes)" />
     <MESSAGE value="added missing methods to TransactionHistory" />
     <MESSAGE value="added DAO unit tests" />
     <MESSAGE value="fixed DAOPassword and DAOPortfolio" />
@@ -585,14 +574,17 @@
     <MESSAGE value="made method in User private" />
     <MESSAGE value="refactor and minor improvements" />
     <MESSAGE value="minor refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor refactor" />
+    <MESSAGE value="added buy/sell messages printed to console" />
+    <MESSAGE value="major unittest refactor" />
+    <MESSAGE value="minor message style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor message style changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/stock_game/DAOPasswordTest.java</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
