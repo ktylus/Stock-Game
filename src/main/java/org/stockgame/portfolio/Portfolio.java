@@ -19,13 +19,13 @@ public class Portfolio {
         balance = new BigDecimal(STARTING_BALANCE);
     }
 
-    public StockInPortfolio getStockByCode(String code) {
+    public StockInPortfolio getStockByCode(String companyCode) {
         for (StockInPortfolio stock : stocks) {
-            if (stock.companyCode().equals(code)) {
+            if (stock.companyCode().equals(companyCode)) {
                 return stock;
             }
         }
-        return new StockInPortfolio(code, 0);
+        return new StockInPortfolio(companyCode, 0);
     }
 
     public List<StockInPortfolio> getAllStocks() {
@@ -40,40 +40,40 @@ public class Portfolio {
         balance = newBalance;
     }
 
-    public void addStock(String code, int units) {
-        if (containsStockWithCode(code)) {
-            addUnitsToExistingStock(code, units);
+    public void addStock(String companyCode, int units) {
+        if (containsStockWithCode(companyCode)) {
+            addUnitsToExistingStock(companyCode, units);
         }
         else {
-            addNewStock(code, units);
+            addNewStock(companyCode, units);
         }
     }
 
-    private boolean containsStockWithCode(String code) {
-        return getStockByCode(code).units() != 0;
+    private boolean containsStockWithCode(String companyCode) {
+        return getStockByCode(companyCode).units() != 0;
     }
 
-    private void addUnitsToExistingStock(String code, int units) {
-        int unitsBeforeChange = getStockByCode(code).units();
+    private void addUnitsToExistingStock(String companyCode, int units) {
+        int unitsBeforeChange = getStockByCode(companyCode).units();
         try {
-            removeStock(code, unitsBeforeChange);
+            removeStock(companyCode, unitsBeforeChange);
         } catch (PortfolioException e) {
             System.err.println(e.getMessage());
         }
-        addNewStock(code, unitsBeforeChange + units);
+        addNewStock(companyCode, unitsBeforeChange + units);
     }
 
-    private void addNewStock(String code, int units) {
-        StockInPortfolio newStock = new StockInPortfolio(code, units);
+    private void addNewStock(String companyCode, int units) {
+        StockInPortfolio newStock = new StockInPortfolio(companyCode, units);
         stocks.add(newStock);
     }
 
-    public void removeStock(String code, int unitsRemoved) throws PortfolioException {
+    public void removeStock(String companyCode, int unitsRemoved) throws PortfolioException {
         if (unitsRemoved == 0) {
             return;
         }
 
-        StockInPortfolio stock = getStockByCode(code);
+        StockInPortfolio stock = getStockByCode(companyCode);
         int ownedUnits = stock.units();
         if (unitsRemoved > ownedUnits) {
             throw new PortfolioException("Attempted to remove more units of stock than owned.");
@@ -82,7 +82,7 @@ public class Portfolio {
         stocks.remove(stock);
         int stocksAfterRemoval = ownedUnits - unitsRemoved;
         if (stocksAfterRemoval > 0) {
-            stocks.add(new StockInPortfolio(code, stocksAfterRemoval));
+            stocks.add(new StockInPortfolio(companyCode, stocksAfterRemoval));
         }
     }
 

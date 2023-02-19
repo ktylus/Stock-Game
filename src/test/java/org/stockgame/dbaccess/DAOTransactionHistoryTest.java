@@ -32,12 +32,14 @@ class DAOTransactionHistoryTest {
         Transaction firstTransaction = history.getTransactionHistory().get(0);
         Transaction secondTransaction = history.getTransactionHistory().get(1);
         assertEquals(2, history.getAmountOfTransactions());
-        Assertions.assertTrue(TestUtilities.isTransactionCorrect(firstTransaction, "IBM", 5,
+        Transaction expectedFirstTransaction = new Transaction("IBM", 5,
                 new BigDecimal("100.00"), TransactionType.PURCHASE,
-                LocalDate.of(2023, 2, 15)));
-        assertTrue(TestUtilities.isTransactionCorrect(secondTransaction, "TSLA", 10,
+                LocalDate.of(2023, 2, 15));
+        Transaction expectedSecondTransaction = new Transaction("TSLA", 10,
                 new BigDecimal("150.00"), TransactionType.SALE,
-                LocalDate.of(2023, 2, 16)));
+                LocalDate.of(2023, 2, 16));
+        assertEquals(expectedFirstTransaction, firstTransaction);
+        assertEquals(expectedSecondTransaction, secondTransaction);
     }
 
     @Test

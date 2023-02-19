@@ -25,13 +25,15 @@ class PortfolioTest {
     @Test
     void getStockInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("TSLA");
-        Assertions.assertTrue(TestUtilities.isStockInPortfolioCorrect(stock, "TSLA", 10));
+        StockInPortfolio expectedStock = new StockInPortfolio("TSLA", 10);
+        assertEquals(expectedStock, stock);
     }
 
     @Test
     void getStockNotInPortfolioByCode() {
         StockInPortfolio stock = portfolio.getStockByCode("ZZZ");
-        assertTrue(TestUtilities.isStockInPortfolioCorrect(stock, "ZZZ", 0));
+        StockInPortfolio expectedStock = new StockInPortfolio("ZZZ", 0);
+        assertEquals(expectedStock, stock);
     }
 
     @Test
@@ -39,8 +41,10 @@ class PortfolioTest {
         List<StockInPortfolio> allStocks = portfolio.getAllStocks();
         StockInPortfolio firstStock = allStocks.get(0);
         StockInPortfolio secondStock = allStocks.get(1);
-        assertTrue(TestUtilities.isStockInPortfolioCorrect(firstStock, "IBM", 5));
-        assertTrue(TestUtilities.isStockInPortfolioCorrect(secondStock, "TSLA", 10));
+        StockInPortfolio expectedFirstStock = new StockInPortfolio("IBM", 5);
+        StockInPortfolio expectedSecondStock = new StockInPortfolio("TSLA", 10);
+        assertEquals(expectedFirstStock, firstStock);
+        assertEquals(expectedSecondStock, secondStock);
     }
 
     @Test

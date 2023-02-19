@@ -1,9 +1,7 @@
 package org.stockgame.dbaccess;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.stockgame.utilities.TestUtilities;
 import org.stockgame.portfolio.Portfolio;
 import org.stockgame.transaction.Transaction;
 import org.stockgame.transaction.TransactionHistory;
@@ -44,12 +42,14 @@ class DBUpdaterTest {
         Transaction firstTransaction = historyInDB.getTransactionHistory().get(0);
         Transaction secondTransaction = historyInDB.getTransactionHistory().get(1);
         assertEquals(2, historyInDB.getAmountOfTransactions());
-        Assertions.assertTrue(TestUtilities.isTransactionCorrect(firstTransaction, "AAPL", 5,
+        Transaction expectedFirstTransaction = new Transaction("AAPL", 5,
                 new BigDecimal("100.00"), TransactionType.PURCHASE,
-                LocalDate.of(2023, 2, 15)));
-        assertTrue(TestUtilities.isTransactionCorrect(secondTransaction, "AAPL", 5,
+                LocalDate.of(2023, 2, 15));
+        Transaction expectedSecondTransaction = new Transaction("AAPL", 5,
                 new BigDecimal("110.00"), TransactionType.SALE,
-                LocalDate.of(2023, 2, 16)));
+                LocalDate.of(2023, 2, 16));
+        assertEquals(expectedFirstTransaction, firstTransaction);
+        assertEquals(expectedSecondTransaction, secondTransaction);
     }
 
     @Test

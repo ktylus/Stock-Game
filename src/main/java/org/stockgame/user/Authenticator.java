@@ -23,7 +23,7 @@ public class Authenticator {
         Scanner scanner = new Scanner(System.in);
         String password = scanner.nextLine();
         while (!isPasswordCorrect(password)) {
-            System.out.println("Incorrect password.");
+            System.err.println("Incorrect password.");
             password = scanner.nextLine();
         }
         System.out.println("Logged in successfully.");
@@ -48,8 +48,8 @@ public class Authenticator {
             (new DBUpdater(username)).registerAccount(hashedPassword, passwordSalt);
             System.out.println("Account registered successfully.");
         } catch (SQLException e) {
-            System.out.println("Encountered an error while trying to register the account:");
-            System.out.println(e.getMessage());
+            System.err.println("Encountered an error while trying to register the account:");
+            System.err.println(e.getMessage());
         }
     }
 
