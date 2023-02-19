@@ -12,7 +12,7 @@ public final class Client {
         logInOrRegister();
     }
 
-    public static void logInOrRegister() {
+    private static void logInOrRegister() {
         System.out.println("Enter \"log in\" if you wish to log in.");
         System.out.println("Enter \"register\" if you wish to register.");
         Scanner scanner = new Scanner(System.in);
