@@ -2,7 +2,7 @@
 
 Stock market game with real prices.
 
-An investment simulator - you are given a 1000$ at the start.
+An investment simulator - you are given 1000$ at the start.
 Use your skills to achieve the biggest profit.
 
 ### Features:
@@ -21,5 +21,6 @@ Use your skills to achieve the biggest profit.
 - PostgreSQL database
 - CodeMR (static code analysis)
 
-To check static code analysis report, go to:
-codemr/stock_game_project/html/main_report/index.html
+### UML diagram
+
+UML diagram can be found in uml_diagram directory.
