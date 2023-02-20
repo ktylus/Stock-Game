@@ -4,6 +4,9 @@ import org.stockgame.user.Authenticator;
 
 import java.util.Scanner;
 
+/**
+ * Main class used to start the program.
+ */
 public final class Client {
     private Client() {
     }

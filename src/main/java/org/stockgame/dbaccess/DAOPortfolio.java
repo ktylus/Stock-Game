@@ -6,6 +6,10 @@ import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * DAO retrieving portfolio and its balance
+ * from database, given username.
+ */
 public class DAOPortfolio {
 
     private final DBConnection dbConnection;

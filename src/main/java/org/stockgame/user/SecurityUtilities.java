@@ -5,6 +5,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.HexFormat;
 
+/**
+ * A class containing methods that implement password salting.
+ */
 public final class SecurityUtilities {
 
     private static final int HEX_SYSTEM_BASE = 16;

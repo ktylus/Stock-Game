@@ -9,6 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+/**
+ * DAO retrieving transaction history
+ * from database, given username.
+ */
+
 public class DAOTransactionHistory {
 
     private final DBConnection dbConnection;

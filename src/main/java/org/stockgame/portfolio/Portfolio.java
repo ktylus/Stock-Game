@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * A class representing user's portfolio.
+ */
 public class Portfolio {
 
     private final List<StockInPortfolio> stocks;

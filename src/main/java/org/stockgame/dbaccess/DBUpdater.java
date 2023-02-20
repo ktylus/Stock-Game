@@ -7,6 +7,10 @@ import org.stockgame.transaction.TransactionHistory;
 
 import java.sql.SQLException;
 
+/**
+ * A class responsible for all database updates,
+ * including account registration.
+ */
 public class DBUpdater {
 
     private final DBConnection dbConnection;

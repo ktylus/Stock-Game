@@ -5,6 +5,10 @@ import org.stockgame.stockapi.StockAPIException;
 
 import java.math.BigDecimal;
 
+/**
+ * A class responsible for displaying information
+ * about a given stock.
+ */
 public class StockInformationPrinter {
 
     public void printStockPrice(String companyCode) {

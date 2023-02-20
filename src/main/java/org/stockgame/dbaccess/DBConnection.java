@@ -2,6 +2,10 @@ package org.stockgame.dbaccess;
 
 import java.sql.*;
 
+/**
+ * A singleton class, used to establish the connection with
+ * a given database, using JDBC.
+ */
 public final class DBConnection {
 
     private Connection connection;

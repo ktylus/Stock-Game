@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * A class responsible for keeping track of the
+ * transactions made.
+ */
 public class TransactionHistory {
 
     private final List<Transaction> transactionHistory;

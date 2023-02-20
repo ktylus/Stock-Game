@@ -3,6 +3,10 @@ package org.stockgame.dbaccess;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * DAO retrieving password and password salt
+ * from database, given username.
+ */
 public class DAOPassword {
 
     private final DBConnection dbConnection;

@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="changed method visibility in client to private">
+    <list default="true" id="3a4f7b51-e4b2-43ce-a94b-212fc7c47cbc" name="Changes" comment="updated readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOTransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DAOTransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DBUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/dbaccess/DBUpdater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/transaction/TransactionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DAOTransactionHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DBUpdaterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/dbaccess/DBUpdaterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/stockgame/portfolio/PortfolioManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/stockgame/portfolio/PortfolioManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/portfolio/PortfolioPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInformationPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/stock/StockInformationPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockgame/stockapi/FinnhubConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stockgame/stockapi/FinnhubConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,27 +78,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Kamil/Desktop/Proggen_Inspections_wo_javadoc.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kamil/Desktop/Proggen_Inspections_wo_javadoc.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kamil\Desktop\stock game\stock_game_project\src\main\java\org\example" />
@@ -242,35 +250,8 @@
       <workItem from="1676446509899" duration="15200000" />
       <workItem from="1676535528214" duration="16231000" />
       <workItem from="1676754605476" duration="2079000" />
-      <workItem from="1676805407952" duration="12157000" />
-    </task>
-    <task id="LOCAL-00028" summary="added STARTING_BALANCE explaining final variable">
-      <created>1676374402662</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1676374402662</updated>
-    </task>
-    <task id="LOCAL-00029" summary="added INVALID transaction type">
-      <created>1676374546981</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1676374546981</updated>
-    </task>
-    <task id="LOCAL-00030" summary="removed unnecessary JDBC driver registration">
-      <created>1676374700734</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1676374700734</updated>
-    </task>
-    <task id="LOCAL-00031" summary="implemented DBUpdater">
-      <created>1676450684969</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1676450684969</updated>
+      <workItem from="1676805407952" duration="14839000" />
+      <workItem from="1676879747514" duration="2082000" />
     </task>
     <task id="LOCAL-00032" summary="added utility functions to get secure passwords">
       <created>1676450712899</created>
@@ -587,17 +568,41 @@
       <option name="project" value="LOCAL" />
       <updated>1676827055585</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="changed starting balance to BigDecimal">
+      <created>1676827991276</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1676827991276</updated>
+    </task>
+    <task id="LOCAL-00078" summary="changed one method name">
+      <created>1676828005601</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1676828005601</updated>
+    </task>
+    <task id="LOCAL-00079" summary="added UML diagram">
+      <created>1676828021073</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1676828021073</updated>
+    </task>
+    <task id="LOCAL-00080" summary="updated readme">
+      <created>1676828204579</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1676828204579</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed null balance on account registration" />
-    <MESSAGE value="simplified user history command" />
-    <MESSAGE value="added better exception handling" />
-    <MESSAGE value="price in Transaction now correctly displays the dollar sign" />
     <MESSAGE value="improved console messages" />
     <MESSAGE value="added &quot;help&quot; command to see available commands" />
     <MESSAGE value="added readme" />
@@ -619,7 +624,11 @@
     <MESSAGE value="error display improved in User" />
     <MESSAGE value="small console message improvement" />
     <MESSAGE value="changed method visibility in client to private" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed method visibility in client to private" />
+    <MESSAGE value="changed starting balance to BigDecimal" />
+    <MESSAGE value="changed one method name" />
+    <MESSAGE value="added UML diagram" />
+    <MESSAGE value="updated readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

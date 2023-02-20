@@ -7,6 +7,11 @@ import org.stockgame.transaction.TransactionHistory;
 
 import java.util.Scanner;
 
+/**
+ * A class taking input from the user in the form
+ * of operations to perform, doing them using other classes
+ * and displaying the results.
+ */
 public class User {
 
     private final String username;

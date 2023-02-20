@@ -9,6 +9,10 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
+/**
+ * A class responsible for requesting stock prices
+ * from the Finnhub stock API.
+ */
 public class FinnhubConnection implements StockAPIConnection {
 
     private static final String API_KEY = "cficf51r01qq9nt20fjgcficf51r01qq9nt20fk0";

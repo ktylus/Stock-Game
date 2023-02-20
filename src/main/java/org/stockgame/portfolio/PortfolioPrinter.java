@@ -8,6 +8,10 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A class responsible for displaying portfolio
+ * contents in a readable way.
+ */
 public class PortfolioPrinter {
 
     private final Portfolio portfolio;

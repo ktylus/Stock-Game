@@ -1,5 +1,12 @@
 package org.stockgame.stock;
 
+/**
+ * A record representing a stock that is
+ * a part of the user's portfolio.
+ *
+ * @param companyCode
+ * @param units
+ */
 public record StockInPortfolio(String companyCode, int units) {
 
     @Override

@@ -9,6 +9,9 @@ import org.stockgame.transaction.TransactionType;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * A class handling buying and selling stocks.
+ */
 public class PortfolioManager {
 
     private final Portfolio portfolio;

@@ -10,6 +10,14 @@ import org.stockgame.transaction.TransactionHistory;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ * <p>A class responsible logging the user in or
+ * registering an account.</p>
+ *
+ * <p>After logging in successfully, all the user's
+ * information is taken from the database and used to
+ * instantiate the object of the User class.</p>
+ */
 public class Authenticator {
 
     private final String username;
